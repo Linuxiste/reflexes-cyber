@@ -1,0 +1,64 @@
+{
+ "id": "def-urgence-2",
+ "rubrique": "Défense",
+ "theme": "L'urgence, levier n° 1",
+ "titre": "Mise en situation : l'amende",
+ "reflexe": "Face à une urgence, je vérifie par un autre canal : l'appli officielle, le site que je tape moi-même, ou un appel à un numéro que je connais.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, 7 conseils pour éviter les cyberescroqueries",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/7-conseils-pour-eviter-les-cyberescroqueries"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "SMS reçu à 18 h : « Amende impayée, majoration de 135 € ce soir. Réglez ici : amendes-gouv-paiement.com ». Tu fais quoi ?",
+   "choix": [
+    {
+     "txt": "Je paie vite pour éviter la majoration",
+     "va": "paie"
+    },
+    {
+     "txt": "Je vérifie ailleurs",
+     "va": "verifie"
+    }
+   ]
+  },
+  "paie": {
+   "msg": "Aïe, c'est ce que veulent les escrocs ! Tu leur donnerais ta carte bancaire, et souvent bien plus que 35 €.",
+   "va": "indices"
+  },
+  "verifie": {
+   "msg": "Parfait ! Et où vérifierais-tu ?",
+   "choix": [
+    {
+     "txt": "Sur le site officiel, tapé moi-même",
+     "va": "indices"
+    },
+    {
+     "txt": "En cliquant sur le lien pour voir",
+     "va": "lien"
+    }
+   ]
+  },
+  "lien": {
+   "msg": "Le lien, c'est justement la porte d'entrée du piège. On vérifie toujours sans passer par lui.",
+   "va": "indices"
+  },
+  "indices": {
+   "msg": "Les indices : l'urgence (« ce soir »), un site qui n'est pas en .gouv.fr, et l'administration ne réclame pas d'amende par SMS avec un lien.",
+   "va": "geste"
+  },
+  "geste": {
+   "msg": "Tu peux transférer ce SMS au 33700 : c'est le numéro gratuit pour signaler les SMS frauduleux.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Une urgence ? Je vérifie par un autre chemin, jamais par le lien reçu. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "id": "def-president-2",
+ "rubrique": "Défense",
+ "theme": "Fraude au président ou au trésorier",
+ "titre": "Le RIB qui change",
+ "reflexe": "Un fournisseur m'annonce un changement de RIB par mail ? Je vérifie par téléphone, avec un numéro que j'avais déjà.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, 7 conseils pour éviter les cyberescroqueries",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/7-conseils-pour-eviter-les-cyberescroqueries"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction",
+  "finances"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Mail d'un fournisseur habituel : « Nous changeons de banque, voici notre nouveau RIB pour la prochaine facture. » Tu mets à jour ?",
+   "choix": [
+    {
+     "txt": "Oui, c'est un fournisseur connu",
+     "va": "oui"
+    },
+    {
+     "txt": "Je vérifie d'abord",
+     "va": "verifie"
+    }
+   ]
+  },
+  "oui": {
+   "msg": "C'est le piège du faux RIB : l'escroc se fait passer pour le fournisseur, et la prochaine facture part sur son compte.",
+   "va": "comment"
+  },
+  "verifie": {
+   "msg": "Très bon réflexe ! Tu vérifies comment ?",
+   "choix": [
+    {
+     "txt": "Je réponds au mail",
+     "va": "repond"
+    },
+    {
+     "txt": "J'appelle le numéro que je connais",
+     "va": "comment"
+    }
+   ]
+  },
+  "repond": {
+   "msg": "Si la messagerie du fournisseur est piratée, c'est l'escroc qui te répondra « oui, c'est bien nous » !",
+   "va": "comment"
+  },
+  "comment": {
+   "msg": "La seule vérification fiable : appeler le fournisseur sur un numéro que tu avais avant ce mail. Celui de tes anciennes factures, par exemple.",
+   "va": "regle"
+  },
+  "regle": {
+   "msg": "Avec {{org.tresorier}}, vous pouvez fixer une règle simple : aucun changement de RIB sans appel de vérification.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Nouveau RIB par mail ? J'appelle d'abord, avec un numéro que j'avais déjà. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

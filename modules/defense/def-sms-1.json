@@ -1,0 +1,55 @@
+{
+ "id": "def-sms-1",
+ "rubrique": "Défense",
+ "theme": "SMS, QR codes et appels",
+ "titre": "Le colis qui n'existe pas",
+ "reflexe": "Je ne suis jamais un lien reçu par SMS pour un colis, une amende ou un remboursement. Je vérifie dans l'appli officielle.",
+ "source": {
+  "nom": "33700, signalement des SMS et appels indésirables",
+  "url": "https://www.33700.fr/"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "« Votre colis n'a pas pu être livré. Frais de réexpédition : 1,99 €. » Ça te dit quelque chose ?",
+   "choix": [
+    {
+     "txt": "Oui, je l'ai déjà reçu",
+     "va": "deja"
+    },
+    {
+     "txt": "Non, jamais",
+     "va": "jamais"
+    }
+   ]
+  },
+  "deja": {
+   "msg": "Tu n'es pas le seul : c'est l'un des SMS frauduleux les plus envoyés en France.",
+   "va": "piege"
+  },
+  "jamais": {
+   "msg": "Ça viendra sûrement ! C'est l'un des SMS frauduleux les plus envoyés en France.",
+   "va": "piege"
+  },
+  "piege": {
+   "msg": "Le piège, ce n'est pas 1,99 €. C'est ta carte bancaire : une fois saisie, elle peut servir à des achats bien plus gros.",
+   "va": "verif"
+  },
+  "verif": {
+   "msg": "Tu attends vraiment un colis ? Ouvre l'appli ou le site du transporteur toi-même, avec ton numéro de suivi.",
+   "va": "signal"
+  },
+  "signal": {
+   "msg": "Et transfère le SMS au 33700. C'est gratuit, et ça aide à bloquer ces numéros.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Un SMS avec un lien et un petit paiement ? Je vérifie ailleurs et je signale au 33700. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

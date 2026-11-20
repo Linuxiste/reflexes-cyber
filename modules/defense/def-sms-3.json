@@ -1,0 +1,71 @@
+{
+ "id": "def-sms-3",
+ "rubrique": "Défense",
+ "theme": "SMS, QR codes et appels",
+ "titre": "Le faux conseiller bancaire",
+ "reflexe": "Ma banque ne me demande jamais un code reçu par SMS ni de valider une opération au téléphone. Je raccroche et je rappelle le numéro de ma carte.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, 7 conseils pour éviter les cyberescroqueries",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/7-conseils-pour-eviter-les-cyberescroqueries"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "finances",
+  "direction"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Le téléphone sonne. « Bonjour, service fraude de votre banque. Une opération suspecte est en cours. » La personne connaît ton nom. Tu la crois ?",
+   "choix": [
+    {
+     "txt": "Oui, elle connaît mon nom",
+     "va": "nom"
+    },
+    {
+     "txt": "Je reste prudent",
+     "va": "prudent"
+    }
+   ]
+  },
+  "nom": {
+   "msg": "Ton nom, et parfois ton adresse, se trouvent facilement après une fuite de données. Ça ne prouve rien.",
+   "va": "code"
+  },
+  "prudent": {
+   "msg": "Bon réflexe. Écoute la suite…",
+   "va": "code"
+  },
+  "code": {
+   "msg": "« Pour bloquer l'opération, donnez-moi le code que vous allez recevoir par SMS. »",
+   "choix": [
+    {
+     "txt": "Je le donne, c'est pour bloquer",
+     "va": "donne"
+    },
+    {
+     "txt": "Je refuse",
+     "va": "refuse"
+    }
+   ]
+  },
+  "donne": {
+   "msg": "C'est le piège ! Ce code sert à valider un paiement ou un nouvel appareil… au profit de l'escroc.",
+   "va": "geste"
+  },
+  "refuse": {
+   "msg": "Exactement : un code reçu par SMS ne se donne à personne, même pas à ta banque.",
+   "va": "geste"
+  },
+  "geste": {
+   "msg": "Le bon geste : raccrocher, puis appeler toi-même le numéro au dos de ta carte bancaire.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Un code SMS ne se donne jamais. Je raccroche et je rappelle le numéro que je connais. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

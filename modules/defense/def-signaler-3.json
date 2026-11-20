@@ -1,0 +1,85 @@
+{
+ "id": "def-signaler-3",
+ "rubrique": "Défense",
+ "theme": "Signaler",
+ "titre": "Quiz : à qui je signale ?",
+ "reflexe": "Au travail, je signale à {{org.contact}}. Un SMS frauduleux : au 33700. Un mail frauduleux : sur signal-spam.fr. Une attaque : 17Cyber.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, 10 mesures essentielles",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/10-mesures-essentielles-assurer-securite-numerique"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "educatif",
+  "soin",
+  "benevoles"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Dernier quiz de la série Défense ! Un mail douteux arrive sur ta boîte de travail. Tu fais quoi ?",
+   "choix": [
+    {
+     "txt": "Je le supprime en silence",
+     "va": "q1non"
+    },
+    {
+     "txt": "Je le signale",
+     "va": "q1oui"
+    }
+   ]
+  },
+  "q1non": {
+   "msg": "Le supprimer te protège toi. Le signaler protège aussi tes collègues, qui l'ont peut-être reçu.",
+   "va": "q2"
+  },
+  "q1oui": {
+   "msg": "Super : tes collègues l'ont peut-être reçu aussi !",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : un SMS frauduleux sur ton téléphone. Tu le transfères à quel numéro ?",
+   "choix": [
+    {
+     "txt": "Le 33700",
+     "va": "q2oui"
+    },
+    {
+     "txt": "Le 17",
+     "va": "q2non"
+    }
+   ]
+  },
+  "q2oui": {
+   "msg": "Bravo, le 33700, gratuit.",
+   "va": "q3"
+  },
+  "q2non": {
+   "msg": "Le 17, c'est la police pour une urgence. Pour un SMS frauduleux, c'est le 33700.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Et pour un mail frauduleux sur ta boîte personnelle ?",
+   "choix": [
+    {
+     "txt": "signal-spam.fr",
+     "va": "fin"
+    },
+    {
+     "txt": "Je réponds à l'escroc",
+     "va": "repond"
+    }
+   ]
+  },
+  "repond": {
+   "msg": "Surtout pas : répondre lui confirme que ton adresse est active. On signale sur signal-spam.fr.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Signaler, c'est protéger tout le monde. Bravo, tu as fini la série Défense ! 👋",
+   "fin": true
+  }
+ }
+}

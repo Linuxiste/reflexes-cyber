@@ -1,0 +1,13 @@
+{
+ "_note": "Métiers proposés à l'accueil du site. Chaque module indique les métiers concernés (« tous » par défaut) et ceux pour qui il est prioritaire. Une structure peut n'en garder qu'une partie (clé « metiers » de son config.json).",
+ "metiers": [
+  {"id": "tous", "nom": "Tout le monde", "description": "Le parcours commun, pour toute personne qui utilise un ordinateur ou un téléphone au travail."},
+  {"id": "direction", "nom": "Direction et encadrement", "description": "Décide, signe, valide les dépenses : cible n° 1 de la fraude au président."},
+  {"id": "finances", "nom": "Comptabilité, paie et finances", "description": "Fait les virements et gère les RIB des fournisseurs."},
+  {"id": "accueil", "nom": "Accueil et secrétariat", "description": "Reçoit les appels, les mails et les visiteurs : premier rempart contre l'ingénierie sociale."},
+  {"id": "educatif", "nom": "Éducateurs et animateurs", "description": "Accompagne des jeunes ou des publics fragiles, souvent sur des équipements partagés."},
+  {"id": "soin", "nom": "Soignants", "description": "Manipule des données de santé, très sensibles."},
+  {"id": "rh", "nom": "Ressources humaines", "description": "Gère les arrivées et les départs, donc l'ouverture et la fermeture des comptes."},
+  {"id": "benevoles", "nom": "Bénévoles", "description": "Utilise souvent son matériel personnel et des comptes partagés."}
+ ]
+}

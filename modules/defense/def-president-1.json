@@ -1,0 +1,67 @@
+{
+ "id": "def-president-1",
+ "rubrique": "Défense",
+ "theme": "Fraude au président ou au trésorier",
+ "titre": "Le virement très discret",
+ "reflexe": "Une demande de virement urgente et confidentielle par mail ? Je rappelle la personne sur son numéro habituel avant de faire quoi que ce soit.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, 7 conseils pour éviter les cyberescroqueries",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/7-conseils-pour-eviter-les-cyberescroqueries"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction",
+  "finances"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Mail de {{org.presidence}} : « Je suis en réunion, peux-tu faire un virement urgent à ce fournisseur ? C'est confidentiel, n'en parle à personne. » Tu fais quoi ?",
+   "choix": [
+    {
+     "txt": "Je fais le virement, c'est la direction",
+     "va": "vire"
+    },
+    {
+     "txt": "Je trouve ça bizarre",
+     "va": "bizarre"
+    }
+   ]
+  },
+  "vire": {
+   "msg": "C'est exactement ce que l'escroc espère ! Cette arnaque s'appelle la « fraude au président ».",
+   "va": "indices"
+  },
+  "bizarre": {
+   "msg": "Tu as raison ! Qu'est-ce qui cloche, selon toi ?",
+   "choix": [
+    {
+     "txt": "L'urgence",
+     "va": "indices"
+    },
+    {
+     "txt": "Le secret",
+     "va": "indices"
+    }
+   ]
+  },
+  "indices": {
+   "msg": "Les deux ! L'urgence t'empêche de réfléchir, et le secret t'empêche de demander conseil. Ce sont les deux signaux de cette arnaque.",
+   "va": "adresse"
+  },
+  "adresse": {
+   "msg": "Souvent, l'adresse de l'expéditeur ressemble à la vraie, à une lettre près. Et si sa messagerie a été piratée, elle peut même être la vraie.",
+   "va": "geste"
+  },
+  "geste": {
+   "msg": "Le bon geste : appeler la personne sur le numéro que tu connais déjà. Jamais celui donné dans le mail.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Urgent et secret, c'est le signal d'alarme. Je rappelle avant de virer. Personne ne te reprochera d'avoir vérifié. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

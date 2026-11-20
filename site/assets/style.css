@@ -1,0 +1,109 @@
+/* Réflexes cyber : feuille de style unique (pages modules, catalogue, entraînement). */
+:root {
+  --fond: #f4f6f8;
+  --carte: #ffffff;
+  --texte: #1d2733;
+  --doux: #5b6773;
+  --accent: #1f6feb;
+  --accent-texte: #ffffff;
+  --bulle-perso: #ffffff;
+  --bulle-moi: #dcebff;
+  --bord: #d6dde4;
+  --alerte: #c8102e;
+  --alerte-fond: #fff1f2;
+  --ok: #1a7f37;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fond: #11161c;
+    --carte: #1a222b;
+    --texte: #e6edf3;
+    --doux: #9aa7b4;
+    --accent: #4c8dff;
+    --bulle-perso: #222c37;
+    --bulle-moi: #1d3a5f;
+    --bord: #2f3b47;
+    --alerte: #ff5a6e;
+    --alerte-fond: #2a1418;
+    --ok: #3fb950;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font: 17px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--accent); }
+.page { max-width: 640px; margin: 0 auto; padding: 16px; }
+header.bandeau { display: flex; align-items: center; gap: 12px; padding: 12px 0; }
+.avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 24px;
+  background: var(--bulle-moi); flex: none;
+}
+.bandeau h1 { font-size: 1.05rem; margin: 0; }
+.bandeau p { margin: 0; color: var(--doux); font-size: .9rem; }
+
+/* conversation */
+.fil { display: flex; flex-direction: column; gap: 10px; padding: 8px 0 24px; }
+.bulle {
+  max-width: 85%; padding: 10px 14px; border-radius: 18px;
+  border: 1px solid var(--bord); white-space: pre-line;
+}
+.bulle.perso { background: var(--bulle-perso); align-self: flex-start; border-bottom-left-radius: 6px; }
+.bulle.moi { background: var(--bulle-moi); align-self: flex-end; border-bottom-right-radius: 6px; }
+.frappe { align-self: flex-start; color: var(--doux); padding: 4px 14px; }
+.choix { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.choix button, .bouton {
+  font: inherit; cursor: pointer; border: 1px solid var(--accent);
+  background: var(--carte); color: var(--accent);
+  padding: 8px 14px; border-radius: 999px; text-decoration: none; display: inline-block;
+}
+.choix button:hover, .choix button:focus-visible, .bouton:hover { background: var(--accent); color: var(--accent-texte); }
+.bouton.plein { background: var(--accent); color: var(--accent-texte); }
+.retenir {
+  background: var(--carte); border: 1px solid var(--bord); border-left: 5px solid var(--ok);
+  border-radius: 12px; padding: 14px 16px; margin-top: 8px;
+}
+.retenir h2 { font-size: 1rem; margin: 0 0 6px; }
+.retenir p { margin: 6px 0; }
+.source { color: var(--doux); font-size: .9rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+
+/* catalogue */
+.rubrique h2 { font-size: 1.1rem; margin: 24px 0 8px; }
+.liste { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.liste a {
+  display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px;
+  background: var(--carte); border: 1px solid var(--bord); border-radius: 12px;
+  text-decoration: none; color: var(--texte);
+}
+.liste .fait { color: var(--ok); font-size: .9rem; white-space: nowrap; }
+.jour { background: var(--carte); border: 1px solid var(--bord); border-radius: 14px; padding: 16px; margin: 8px 0 16px; }
+
+/* page d'entraînement (faux phishing) */
+.panneau {
+  background: var(--alerte-fond); border: 3px solid var(--alerte); border-radius: 16px;
+  padding: 20px; text-align: center; margin: 16px 0;
+  animation: pulsation 1.2s ease-in-out infinite;   /* < 3 éclats par seconde (WCAG 2.3.1) */
+}
+.panneau .gros { font-size: clamp(1.6rem, 6vw, 2.4rem); font-weight: 800; color: var(--alerte); margin: 0; }
+.panneau p { margin: 8px 0 0; font-size: 1.1rem; }
+@keyframes pulsation {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200, 16, 46, .45); }
+  50% { box-shadow: 0 0 0 14px rgba(200, 16, 46, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .panneau { animation: none; }
+}
+.conseils { background: var(--carte); border: 1px solid var(--bord); border-radius: 12px; padding: 4px 18px 14px; }
+.conseils li { margin: 8px 0; }
+.adresse { font-family: ui-monospace, monospace; background: var(--fond); padding: 1px 6px; border-radius: 6px; word-break: break-all; }
+footer { color: var(--doux); font-size: .85rem; margin: 32px 0 16px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.jour h2 { margin-top: 0; font-size: 1.05rem; }
+.metier { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.metier select { font: inherit; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--bord); background: var(--carte); color: var(--texte); }
+.metier .source { flex-basis: 100%; }

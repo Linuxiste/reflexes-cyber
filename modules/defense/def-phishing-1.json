@@ -1,0 +1,67 @@
+{
+ "id": "def-phishing-1",
+ "rubrique": "Défense",
+ "theme": "Mail d'hameçonnage",
+ "titre": "Le lien qui se déguise",
+ "reflexe": "Avant de cliquer, je laisse la souris sur le lien et je lis l'adresse qui s'affiche. Si elle ne correspond pas, je ne clique pas.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, fiche réflexe Hameçonnage",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/fiches-reflexes/hameconnage-phishing"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "accueil",
+  "rh"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Salut, c'est {{perso}} ! Petite question : un mail te dit « Votre colis est bloqué, cliquez ici ». Tu fais quoi ?",
+   "choix": [
+    {
+     "txt": "Je clique, j'attends un colis",
+     "va": "clic"
+    },
+    {
+     "txt": "Je regarde d'abord le lien",
+     "va": "bravo"
+    }
+   ]
+  },
+  "clic": {
+   "msg": "C'est le piège le plus courant : les escrocs envoient ce mail à des milliers de gens. Forcément, certains attendent un colis !",
+   "va": "astuce"
+  },
+  "bravo": {
+   "msg": "Excellent réflexe ! Et tu sais comment voir où mène vraiment un lien ?",
+   "choix": [
+    {
+     "txt": "Oui, en survolant",
+     "va": "astuce"
+    },
+    {
+     "txt": "Pas vraiment",
+     "va": "astuce"
+    }
+   ]
+  },
+  "astuce": {
+   "msg": "Le texte d'un lien peut dire n'importe quoi. Laisse la souris dessus, sans cliquer : au bout d'une seconde, la vraie adresse s'affiche en bas de l'écran.",
+   "va": "exemple"
+  },
+  "exemple": {
+   "msg": "Le texte dit « La Poste », mais l'adresse affichée est 25fjus25g.fr/colis.html ? Ce n'est pas La Poste. Pas besoin d'être expert : il suffit de lire.",
+   "va": "mobile"
+  },
+  "mobile": {
+   "msg": "Sur un téléphone, appuie longtemps sur le lien sans relâcher : l'adresse apparaît aussi.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Une seconde de survol peut tout changer. À demain pour 2 minutes de plus ! 👋",
+   "fin": true
+  }
+ }
+}

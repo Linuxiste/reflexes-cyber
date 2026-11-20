@@ -1,0 +1,55 @@
+{
+ "id": "def-urgence-1",
+ "rubrique": "Défense",
+ "theme": "L'urgence, levier n° 1",
+ "titre": "Pourquoi ils sont toujours pressés",
+ "reflexe": "Quand un message me presse, je ralentis. L'urgence est l'outil préféré des escrocs.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, 7 conseils pour éviter les cyberescroqueries",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/7-conseils-pour-eviter-les-cyberescroqueries"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Dis-moi : « Votre compte sera supprimé dans 2 heures ». Qu'est-ce que tu ressens en lisant ça ?",
+   "choix": [
+    {
+     "txt": "Un peu de stress",
+     "va": "stress"
+    },
+    {
+     "txt": "Rien, je connais",
+     "va": "connais"
+    }
+   ]
+  },
+  "stress": {
+   "msg": "C'est normal, et c'est exactement le but ! Sous le stress, on agit vite et on vérifie moins.",
+   "va": "pourquoi"
+  },
+  "connais": {
+   "msg": "Tant mieux ! Mais même les plus vigilants se font avoir un jour de fatigue. Voyons pourquoi ça marche.",
+   "va": "pourquoi"
+  },
+  "pourquoi": {
+   "msg": "Une arnaque a besoin que tu agisses avant de réfléchir. Alors elle invente un délai, une amende, une menace.",
+   "va": "parapente"
+  },
+  "parapente": {
+   "msg": "En parapente, on dit : « Quand tout s'accélère, on ralentit ses gestes. » C'est pareil ici.",
+   "va": "geste"
+  },
+  "geste": {
+   "msg": "Le bon geste : souffler, fermer le message, et vérifier par un autre chemin. L'appli officielle, le site tapé à la main, un appel.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Plus c'est urgent, plus je prends mon temps. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

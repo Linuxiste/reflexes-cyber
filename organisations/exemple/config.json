@@ -1,0 +1,15 @@
+{
+  "nom_site": "Réflexes cyber",
+  "slogan": "2 minutes par jour pour tes réflexes cyber",
+  "personnage": {"nom": "Lou", "avatar": "🪂", "presentation": "monitrice de parapente : avant chaque vol, elle fait sa visite prévol. Ici, c'est la prévol de ta sécurité numérique."},
+  "rubriques": ["Défense", "Protection", "Résilience", "Gouvernance", "Obligations NIS 2"],
+  "pied": "Réflexes cyber pour {{org.nom}} · contenus libres CC BY-SA 4.0 · aucune donnée collectée",
+  "org": {
+    "nom": "l'Association Exemple",
+    "nom_court": "l'asso",
+    "contact": "le référent informatique",
+    "contact_detail": "par mail à informatique@exemple.org ou au 01 23 45 67 89",
+    "tresorier": "Camille, la trésorière",
+    "presidence": "Dominique, le président"
+  }
+}

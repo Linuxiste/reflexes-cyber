@@ -1,0 +1,84 @@
+{
+ "id": "def-president-3",
+ "rubrique": "Défense",
+ "theme": "Fraude au président ou au trésorier",
+ "titre": "Quiz : les bons réflexes avant un virement",
+ "reflexe": "Pour tout virement inhabituel : je ralentis, je vérifie par un autre canal, et j'en parle à quelqu'un. Le secret est un signal d'alarme.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, 7 conseils pour éviter les cyberescroqueries",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/7-conseils-pour-eviter-les-cyberescroqueries"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction",
+  "finances"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Quiz ! Une demande de virement arrive par mail, avec la signature de {{org.presidence}}. La signature prouve que c'est lui ?",
+   "choix": [
+    {
+     "txt": "Oui",
+     "va": "q1non"
+    },
+    {
+     "txt": "Non",
+     "va": "q1oui"
+    }
+   ]
+  },
+  "q1non": {
+   "msg": "Une signature se copie en un clin d'œil. Elle ne prouve rien.",
+   "va": "q2"
+  },
+  "q1oui": {
+   "msg": "Exact : une signature se copie facilement.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : on te demande de ne parler de ce virement à personne. C'est…",
+   "choix": [
+    {
+     "txt": "Normal si c'est confidentiel",
+     "va": "q2non"
+    },
+    {
+     "txt": "Un signal d'alarme",
+     "va": "q2oui"
+    }
+   ]
+  },
+  "q2non": {
+   "msg": "C'est le signal n° 1 de la fraude au président. Le secret sert à t'isoler.",
+   "va": "q3"
+  },
+  "q2oui": {
+   "msg": "Bravo ! Le secret sert à t'isoler.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Dernière : tu as un doute, mais tu as peur de déranger. Tu fais quoi ?",
+   "choix": [
+    {
+     "txt": "J'appelle quand même pour vérifier",
+     "va": "fin"
+    },
+    {
+     "txt": "Je fais le virement pour ne pas déranger",
+     "va": "deranger"
+    }
+   ]
+  },
+  "deranger": {
+   "msg": "Mieux vaut un appel de 30 secondes qu'un virement perdu. Un dirigeant préfère toujours qu'on vérifie.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Ralentir, vérifier par un autre canal, en parler : les 3 réflexes avant un virement inhabituel. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

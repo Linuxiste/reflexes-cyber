@@ -1,0 +1,11 @@
+{
+ "slug": "colis",
+ "titre": "Le colis qui n'existait pas",
+ "accroche": "Le SMS parlait d'un colis bloqué et de petits frais de réexpédition. Le vrai but : ta carte bancaire.",
+ "module": "def-sms-1",
+ "conseils": [
+  "Je ne suis <strong>jamais</strong> un lien reçu par SMS pour un colis, une amende ou un remboursement.",
+  "J'attends un colis ? J'ouvre <strong>moi-même</strong> l'appli ou le site du transporteur, avec mon numéro de suivi.",
+  "Je transfère le SMS frauduleux au <strong>33700</strong> (gratuit)."
+ ]
+}

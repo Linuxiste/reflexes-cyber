@@ -1,0 +1,84 @@
+{
+ "id": "def-phishing-3",
+ "rubrique": "Défense",
+ "theme": "Mail d'hameçonnage",
+ "titre": "Quiz éclair : les signaux d'un faux mail",
+ "reflexe": "Un faux mail cumule souvent : une urgence, une demande inhabituelle, une adresse d'expéditeur bizarre et un lien qui ne mène pas où il dit.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, fiche réflexe Hameçonnage",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/fiches-reflexes/hameconnage-phishing"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "accueil",
+  "rh"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Quiz éclair, 3 questions ! Lequel de ces signaux doit t'alerter dans un mail ?",
+   "choix": [
+    {
+     "txt": "Une urgence (« sous 24 h »)",
+     "va": "q1"
+    },
+    {
+     "txt": "Un logo officiel",
+     "va": "logo"
+    }
+   ]
+  },
+  "logo": {
+   "msg": "Un logo se copie en deux secondes : il ne prouve rien. En revanche, l'urgence est un signal très fréquent.",
+   "va": "q2"
+  },
+  "q1": {
+   "msg": "Exact ! L'urgence sert à t'empêcher de réfléchir.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : l'expéditeur s'appelle « Service Client », mais l'adresse est service.client.4521@gmail.com. Ça te paraît normal ?",
+   "choix": [
+    {
+     "txt": "Oui, c'est le service client",
+     "va": "q2non"
+    },
+    {
+     "txt": "Non, une entreprise n'écrit pas depuis Gmail",
+     "va": "q2oui"
+    }
+   ]
+  },
+  "q2non": {
+   "msg": "Le nom affiché se choisit librement. Regarde toujours l'adresse complète, entre les < >.",
+   "va": "q3"
+  },
+  "q2oui": {
+   "msg": "Bravo, c'est un très bon indice !",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Dernière : un mail de ton fournisseur d'énergie te demande ton mot de passe « pour vérification ». Tu réponds ?",
+   "choix": [
+    {
+     "txt": "Non, jamais",
+     "va": "fin"
+    },
+    {
+     "txt": "Si c'est vraiment lui, oui",
+     "va": "jamais"
+    }
+   ]
+  },
+  "jamais": {
+   "msg": "Aucun service sérieux ne demande ton mot de passe par mail. Jamais.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Urgence, expéditeur bizarre, demande inhabituelle : un seul de ces signaux suffit pour ralentir. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

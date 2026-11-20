@@ -1,0 +1,64 @@
+{
+ "id": "def-sms-2",
+ "rubrique": "Défense",
+ "theme": "SMS, QR codes et appels",
+ "titre": "Le QR code collé sur l'horodateur",
+ "reflexe": "Un QR code est un lien caché. Avant de payer, je regarde l'adresse qui s'affiche après le scan, et je préfère l'appli officielle.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, 7 conseils pour éviter les cyberescroqueries",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/7-conseils-pour-eviter-les-cyberescroqueries"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Tu te gares. Sur l'horodateur, un autocollant : « Payez plus vite, scannez-moi ». Tu scannes ?",
+   "choix": [
+    {
+     "txt": "Oui, c'est pratique",
+     "va": "scan"
+    },
+    {
+     "txt": "Je me méfie",
+     "va": "mefie"
+    }
+   ]
+  },
+  "scan": {
+   "msg": "C'est pratique… pour les escrocs aussi ! Il leur suffit de coller leur propre QR code par-dessus le vrai.",
+   "va": "cache"
+  },
+  "mefie": {
+   "msg": "Tu as raison ! Tu sais pourquoi ?",
+   "choix": [
+    {
+     "txt": "On ne voit pas où il mène",
+     "va": "cache"
+    },
+    {
+     "txt": "Pas vraiment",
+     "va": "cache"
+    }
+   ]
+  },
+  "cache": {
+   "msg": "Un QR code, c'est un lien qu'on ne peut pas lire à l'œil. On ne voit l'adresse qu'après l'avoir scanné.",
+   "va": "geste"
+  },
+  "geste": {
+   "msg": "Le réflexe : après le scan, ton téléphone affiche l'adresse avant de l'ouvrir. Lis-la. Un autocollant par-dessus l'affiche ? Méfiance.",
+   "va": "mieux"
+  },
+  "mieux": {
+   "msg": "Pour payer, le plus sûr reste l'appli officielle de la ville ou du parking, que tu installes toi-même.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Un QR code, c'est un lien caché : je lis l'adresse avant d'ouvrir. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

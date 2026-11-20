@@ -1,0 +1,68 @@
+{
+ "id": "def-signaler-2",
+ "rubrique": "Défense",
+ "theme": "Signaler",
+ "titre": "Mise en situation : l'ordinateur bizarre",
+ "reflexe": "Un comportement anormal sur mon poste (fichiers bizarres, message de rançon) : je débranche le réseau, je ne touche plus à rien, et je préviens.",
+ "source": {
+  "nom": "17Cyber, l'assistance officielle en cas de cyberattaque",
+  "url": "https://www.17cyber.gouv.fr/"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "educatif",
+  "soin",
+  "benevoles"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Lundi matin, tes fichiers ont des noms étranges, et un message réclame de l'argent pour les « libérer ». Premier réflexe ?",
+   "choix": [
+    {
+     "txt": "J'éteins et je rallume",
+     "va": "eteins"
+    },
+    {
+     "txt": "Je débranche le réseau",
+     "va": "debranche"
+    }
+   ]
+  },
+  "eteins": {
+   "msg": "Mauvaise idée : éteindre peut effacer des traces utiles. Mieux vaut débrancher le câble réseau ou couper le Wi-Fi.",
+   "va": "pourquoi"
+  },
+  "debranche": {
+   "msg": "Parfait ! Tu sais pourquoi ?",
+   "choix": [
+    {
+     "txt": "Pour que ça ne se propage pas",
+     "va": "pourquoi"
+    },
+    {
+     "txt": "Pas vraiment",
+     "va": "pourquoi"
+    }
+   ]
+  },
+  "pourquoi": {
+   "msg": "Un rançongiciel cherche à se propager aux autres ordinateurs et au serveur. Le couper du réseau limite les dégâts.",
+   "va": "payer"
+  },
+  "payer": {
+   "msg": "Et surtout, on ne paie pas : rien ne garantit que les fichiers seront rendus.",
+   "va": "prevenir"
+  },
+  "prevenir": {
+   "msg": "Ensuite, préviens {{org.contact}} tout de suite. En dehors du travail, le site 17Cyber.gouv.fr te guide pas à pas.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Débrancher, ne rien toucher, prévenir. Trois gestes simples qui sauvent beaucoup. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

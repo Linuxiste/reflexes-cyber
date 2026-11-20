@@ -1,0 +1,6 @@
+# Sites construits et bases générées
+dist/
+__pycache__/
+# Personnalisations PRIVÉES des structures : jamais dans le dépôt public (seul l'exemple est publié)
+organisations/*
+!organisations/exemple/

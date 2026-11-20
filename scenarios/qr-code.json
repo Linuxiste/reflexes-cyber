@@ -1,0 +1,11 @@
+{
+ "slug": "qr-code",
+ "titre": "Le QR code piégé",
+ "accroche": "Un QR code, c'est un lien qu'on ne peut pas lire à l'œil. Celui-ci menait vers un faux site.",
+ "module": "def-sms-2",
+ "conseils": [
+  "Après le scan, <strong>je lis l'adresse</strong> que le téléphone affiche avant de l'ouvrir.",
+  "Un autocollant collé par-dessus une affiche ou un horodateur ? <strong>Méfiance.</strong>",
+  "Pour payer, je préfère l'appli officielle, installée moi-même."
+ ]
+}

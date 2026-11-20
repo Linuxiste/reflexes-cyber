@@ -1,0 +1,76 @@
+{
+ "id": "def-phishing-2",
+ "rubrique": "Défense",
+ "theme": "Mail d'hameçonnage",
+ "titre": "Vrai ou faux ? L'adresse",
+ "reflexe": "Le vrai nom du site est juste avant le premier « / » et juste avant « .fr » ou « .com ». Tout le reste peut être inventé.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, fiche réflexe Hameçonnage",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/fiches-reflexes/hameconnage-phishing"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "accueil",
+  "rh"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "On s'entraîne ! Tu survoles un lien « Votre banque » et tu lis : banque-terranova.fr.securite-client.com/connexion. C'est le site de ta banque ?",
+   "choix": [
+    {
+     "txt": "Oui, il y a son nom",
+     "va": "piege"
+    },
+    {
+     "txt": "Non, c'est louche",
+     "va": "bravo"
+    }
+   ]
+  },
+  "piege": {
+   "msg": "Bien tenté, mais non ! Le nom de la banque est au début pour te rassurer. Le vrai site, c'est ce qui est juste avant le premier « / ».",
+   "va": "lecture"
+  },
+  "bravo": {
+   "msg": "Bien vu ! Tu sais repérer où se cache le vrai nom du site ?",
+   "choix": [
+    {
+     "txt": "Juste avant le premier /",
+     "va": "lecture"
+    },
+    {
+     "txt": "Au début de l'adresse",
+     "va": "lecture"
+    }
+   ]
+  },
+  "lecture": {
+   "msg": "Ici, juste avant le premier « / », on lit securite-client.com. C'est ce site-là qui reçoit tes informations, pas ta banque.",
+   "va": "deux"
+  },
+  "deux": {
+   "msg": "Deuxième essai : terranova.fr/espace-client. Cette fois, le nom juste avant le premier « / » est terranova.fr.",
+   "choix": [
+    {
+     "txt": "Ça semble correct",
+     "va": "nuance"
+    },
+    {
+     "txt": "Je me méfie quand même",
+     "va": "nuance"
+    }
+   ]
+  },
+  "nuance": {
+   "msg": "C'est plausible. Mais le plus sûr reste de taper toi-même l'adresse de ta banque, ou d'utiliser son appli, plutôt que de suivre un lien reçu.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Retenu : le vrai nom est juste avant le premier « / ». Et pour un compte important, je passe par l'appli ou par mes favoris. 👋",
+   "fin": true
+  }
+ }
+}

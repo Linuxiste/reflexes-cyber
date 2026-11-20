@@ -1,0 +1,59 @@
+{
+ "id": "def-signaler-1",
+ "rubrique": "Défense",
+ "theme": "Signaler",
+ "titre": "J'ai cliqué… et maintenant ?",
+ "reflexe": "J'ai cliqué ou j'ai un doute ? Je préviens tout de suite. Plus on signale tôt, plus c'est facile à réparer, et on ne sera pas puni.",
+ "source": {
+  "nom": "17Cyber, l'assistance officielle en cas de cyberattaque",
+  "url": "https://www.17cyber.gouv.fr/"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "educatif",
+  "soin",
+  "benevoles"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Imagine : tu viens de cliquer sur un lien, et tu réalises que c'était sûrement un piège. Tu ressens quoi ?",
+   "choix": [
+    {
+     "txt": "De la honte",
+     "va": "honte"
+    },
+    {
+     "txt": "De la panique",
+     "va": "panique"
+    }
+   ]
+  },
+  "honte": {
+   "msg": "C'est très humain, mais il n'y a aucune honte à avoir. Ces pièges sont faits par des professionnels, et tout le monde peut se faire avoir.",
+   "va": "important"
+  },
+  "panique": {
+   "msg": "Respire : la plupart du temps, ça se rattrape très bien, surtout si on agit vite.",
+   "va": "important"
+  },
+  "important": {
+   "msg": "Le plus important n'est pas d'avoir cliqué. C'est ce que tu fais dans les minutes qui suivent.",
+   "va": "qui"
+  },
+  "qui": {
+   "msg": "Préviens tout de suite {{org.contact}}, {{org.contact_detail}}. Dis simplement ce qui s'est passé.",
+   "va": "mdp"
+  },
+  "mdp": {
+   "msg": "Si tu as saisi un mot de passe, change-le au plus vite, depuis un autre appareil si possible.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Cliquer, ça arrive. Le vrai réflexe, c'est prévenir vite. Merci à ceux qui signalent : ils protègent tout le monde. 👋",
+   "fin": true
+  }
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "slug": "urgence",
+ "titre": "L'urgence qui fait agir trop vite",
+ "accroche": "Le message te pressait : « sous 24 h », « dernier rappel », « compte suspendu ». C'est le levier n° 1 des escrocs.",
+ "module": "def-urgence-1",
+ "conseils": [
+  "<strong>Plus c'est urgent, plus je ralentis.</strong> Une vraie urgence supporte 2 minutes de vérification.",
+  "Je vérifie <strong>par un autre chemin</strong> : l'appli officielle, le site que je tape moi-même, ou un appel à un numéro que je connais.",
+  "En cas de doute au travail, je demande à {{org.contact}}."
+ ]
+}

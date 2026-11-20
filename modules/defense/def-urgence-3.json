@@ -1,0 +1,83 @@
+{
+ "id": "def-urgence-3",
+ "rubrique": "Défense",
+ "theme": "L'urgence, levier n° 1",
+ "titre": "Quiz : urgent ou arnaque ?",
+ "reflexe": "Un vrai interlocuteur accepte toujours que je prenne le temps de vérifier. Celui qui refuse que je raccroche est suspect.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, 7 conseils pour éviter les cyberescroqueries",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/7-conseils-pour-eviter-les-cyberescroqueries"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "accueil"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Quiz rapide ! Un « technicien » t'appelle : « Votre ordinateur est infecté, laissez-moi en prendre le contrôle tout de suite. » Arnaque ?",
+   "choix": [
+    {
+     "txt": "Oui, arnaque",
+     "va": "q1oui"
+    },
+    {
+     "txt": "Peut-être vrai",
+     "va": "q1non"
+    }
+   ]
+  },
+  "q1oui": {
+   "msg": "Exact : aucun éditeur n'appelle spontanément pour réparer ton ordinateur.",
+   "va": "q2"
+  },
+  "q1non": {
+   "msg": "C'est l'arnaque au faux support technique. Personne n'appelle spontanément pour réparer ton ordinateur.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : tu dis « Je vous rappelle dans 5 minutes », et ton interlocuteur insiste pour que tu restes en ligne. Mauvais signe ?",
+   "choix": [
+    {
+     "txt": "Oui",
+     "va": "q2oui"
+    },
+    {
+     "txt": "Non, il veut aider",
+     "va": "q2non"
+    }
+   ]
+  },
+  "q2oui": {
+   "msg": "Bien vu ! Une personne honnête te laisse vérifier.",
+   "va": "q3"
+  },
+  "q2non": {
+   "msg": "Une personne honnête te laisse toujours raccrocher et vérifier. L'insistance est un signal fort.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Et si tu as un doute au travail, tu préviens qui ?",
+   "choix": [
+    {
+     "txt": "{{org.contact}}",
+     "va": "fin"
+    },
+    {
+     "txt": "Personne, je gère seul",
+     "va": "seul"
+    }
+   ]
+  },
+  "seul": {
+   "msg": "Tu n'as pas à gérer seul : {{org.contact}} est là pour ça, {{org.contact_detail}}.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Le bon réflexe : je raccroche, je vérifie, et je n'hésite pas à demander. À demain ! 👋",
+   "fin": true
+  }
+ }
+}
