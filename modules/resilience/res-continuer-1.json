@@ -1,0 +1,60 @@
+{
+ "id": "res-continuer-1",
+ "rubrique": "Résilience",
+ "theme": "Continuer sans informatique",
+ "titre": "Le jour où plus rien ne marche",
+ "reflexe": "Je garde sur papier les quelques informations indispensables : les contacts clés, les numéros d'urgence et la façon de travailler sans ordinateur.",
+ "source": {
+  "nom": "ANSSI, organiser un exercice de gestion de crise cyber",
+  "url": "https://cyber.gouv.fr/publications/organiser-un-exercice-de-gestion-de-crise-cyber"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction",
+  "accueil",
+  "educatif",
+  "soin"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Imagine : plus d'ordinateurs, plus de messagerie, plus de logiciels pendant trois jours. Tu sais comment joindre tes collègues ?",
+   "choix": [
+    {
+     "txt": "Oui, j'ai leurs numéros",
+     "va": "oui"
+    },
+    {
+     "txt": "Euh… ils sont dans ma messagerie",
+     "va": "non"
+    }
+   ]
+  },
+  "oui": {
+   "msg": "Parfait ! Et les autres informations indispensables ?",
+   "va": "liste"
+  },
+  "non": {
+   "msg": "C'est le piège classique : toutes les informations sont… dans l'ordinateur en panne !",
+   "va": "liste"
+  },
+  "liste": {
+   "msg": "Une panne, une coupure ou une attaque peut tout arrêter d'un coup. Ce jour-là, le papier redevient le meilleur ami.",
+   "va": "quoi"
+  },
+  "quoi": {
+   "msg": "Une simple feuille suffit : les numéros de l'équipe et de la direction, de {{org.contact}}, des partenaires clés, et des urgences.",
+   "va": "facon"
+  },
+  "facon": {
+   "msg": "Et pour les tâches vitales, comme les plannings, les rendez-vous ou les traitements : comment faire sans ordinateur ? Ça se prévoit à l'avance, calmement.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Une feuille de contacts imprimée et rangée, c'est une heure de travail qui peut sauver des jours. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "id": "gou-ia-2",
+ "rubrique": "Gouvernance",
+ "theme": "IA générative",
+ "titre": "L'IA qui se trompe avec aplomb",
+ "reflexe": "Une IA peut inventer des faits avec assurance. Je relis et je vérifie tout ce qu'elle produit avant de m'en servir : c'est moi qui signe.",
+ "source": {
+  "nom": "CNIL, intelligence artificielle",
+  "url": "https://www.cnil.fr/fr/intelligence-artificielle"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction",
+  "finances",
+  "soin"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Une IA te répond avec assurance : « La loi impose ceci depuis 2019, article 12 ». Tu recopies dans ton courrier ?",
+   "choix": [
+    {
+     "txt": "Oui, elle a l'air sûre d'elle",
+     "va": "sure"
+    },
+    {
+     "txt": "Je vérifie d'abord",
+     "va": "verifie"
+    }
+   ]
+  },
+  "sure": {
+   "msg": "C'est le piège : une IA peut inventer un article de loi, une date ou un chiffre, et le dire avec une parfaite assurance.",
+   "va": "pourquoi"
+  },
+  "verifie": {
+   "msg": "Excellent réflexe !",
+   "va": "pourquoi"
+  },
+  "pourquoi": {
+   "msg": "Une IA générative produit un texte plausible, pas forcément un texte vrai. Elle ne « sait » pas quand elle se trompe.",
+   "va": "signer"
+  },
+  "signer": {
+   "msg": "Le courrier part pourtant avec ton nom ou celui de {{org.nom_court}}. C'est toi qui en es responsable, pas l'outil.",
+   "va": "geste"
+  },
+  "geste": {
+   "msg": "Le bon usage : l'IA propose, toi tu vérifies. Les chiffres, les dates, les références et les noms se contrôlent à la source.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "L'IA est un assistant, pas une source. Je vérifie avant de signer. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

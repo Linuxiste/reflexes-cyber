@@ -1,0 +1,81 @@
+{
+ "id": "res-rancon-3",
+ "rubrique": "Résilience",
+ "theme": "Rançongiciel",
+ "titre": "Quiz : face au rançongiciel",
+ "reflexe": "Les portes d'entrée d'un rançongiciel sont connues : pièces jointes, liens, mots de passe volés, logiciels pas à jour. Chaque bon réflexe en ferme une.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, fiche réflexe Rançongiciels",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/fiches-reflexes/rancongiciels-ransomwares"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Quiz ! Quelle est la meilleure protection contre la perte de données par rançongiciel ?",
+   "choix": [
+    {
+     "txt": "Une sauvegarde débranchée",
+     "va": "q1oui"
+    },
+    {
+     "txt": "Payer vite",
+     "va": "q1non"
+    }
+   ]
+  },
+  "q1oui": {
+   "msg": "Oui ! Avec elle, on restaure et on repart.",
+   "va": "q2"
+  },
+  "q1non": {
+   "msg": "Payer ne garantit rien. Une sauvegarde débranchée, elle, permet de tout récupérer.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : laquelle de ces portes d'entrée est la plus fréquente ?",
+   "choix": [
+    {
+     "txt": "Un mail piégé",
+     "va": "q2oui"
+    },
+    {
+     "txt": "Un écran trop lumineux",
+     "va": "q2non"
+    }
+   ]
+  },
+  "q2oui": {
+   "msg": "Exact : l'hameçonnage reste l'une des premières portes d'entrée.",
+   "va": "q3"
+  },
+  "q2non": {
+   "msg": "Ha ha, non ! Le mail piégé reste l'une des premières portes d'entrée.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Dernière : tu as un doute sur un comportement bizarre de ton ordinateur. Tu attends de voir ?",
+   "choix": [
+    {
+     "txt": "Non, je préviens tout de suite",
+     "va": "fin"
+    },
+    {
+     "txt": "Oui, ça passera",
+     "va": "attendre"
+    }
+   ]
+  },
+  "attendre": {
+   "msg": "Mieux vaut une fausse alerte qu'une attaque découverte trop tard. Préviens {{org.contact}} sans hésiter.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Sauvegarde débranchée, mails vérifiés, alerte rapide : tu fermes les portes. Bravo ! 👋",
+   "fin": true
+  }
+ }
+}

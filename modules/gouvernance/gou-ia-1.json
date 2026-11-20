@@ -1,0 +1,59 @@
+{
+ "id": "gou-ia-1",
+ "rubrique": "Gouvernance",
+ "theme": "IA générative",
+ "titre": "Ce que je colle dans l'IA",
+ "reflexe": "Je ne colle jamais de données personnelles ou confidentielles dans une IA en ligne. Ce que j'y écris peut être conservé et réutilisé.",
+ "source": {
+  "nom": "CNIL, intelligence artificielle",
+  "url": "https://www.cnil.fr/fr/intelligence-artificielle"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Tu dois rédiger un compte rendu sur une personne accompagnée. Une IA en ligne pourrait t'aider. Tu colles tes notes telles quelles ?",
+   "choix": [
+    {
+     "txt": "Oui, ça me fera gagner du temps",
+     "va": "oui"
+    },
+    {
+     "txt": "J'hésite",
+     "va": "hesite"
+    }
+   ]
+  },
+  "oui": {
+   "msg": "Gagner du temps, c'est légitime ! Mais regarde où partent ces notes.",
+   "va": "ou"
+  },
+  "hesite": {
+   "msg": "Tu as raison d'hésiter. Voilà pourquoi.",
+   "va": "ou"
+  },
+  "ou": {
+   "msg": "Ce que tu écris dans une IA en ligne part sur les serveurs d'une entreprise. Il peut être conservé, relu, ou servir à entraîner l'outil.",
+   "va": "sensible"
+  },
+  "sensible": {
+   "msg": "Le nom d'une personne, sa santé, sa situation : ce sont des données personnelles, parfois sensibles. Elles n'ont rien à faire là.",
+   "va": "comment"
+  },
+  "comment": {
+   "msg": "Tu peux utiliser l'IA pour la forme : un modèle de compte rendu, une reformulation, sans aucun nom ni détail qui permette de reconnaître quelqu'un.",
+   "va": "outil"
+  },
+  "outil": {
+   "msg": "Et demande à {{org.contact}} quels outils d'IA sont autorisés chez {{org.nom_court}}.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "L'IA pour la forme, jamais pour les données des personnes. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

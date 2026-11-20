@@ -1,0 +1,58 @@
+{
+ "id": "nis2-intro-2",
+ "rubrique": "Obligations NIS 2",
+ "theme": "NIS2 en 2 minutes",
+ "titre": "Pourquoi la direction doit se former",
+ "reflexe": "Avec NIS2, la cybersécurité est une responsabilité de la direction : elle doit valider les mesures, les suivre, et se former.",
+ "source": {
+  "nom": "ANSSI, la directive NIS 2",
+  "url": "https://cyber.gouv.fr/la-directive-nis-2"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction"
+ ],
+ "statut": "brouillon",
+ "perime_le": "2027-05-20",
+ "etapes": {
+  "debut": {
+   "msg": "Selon toi, avec NIS2, la cybersécurité, c'est l'affaire de qui ?",
+   "choix": [
+    {
+     "txt": "Du service informatique",
+     "va": "info"
+    },
+    {
+     "txt": "De la direction aussi",
+     "va": "direction"
+    }
+   ]
+  },
+  "info": {
+   "msg": "Le service informatique fait beaucoup ! Mais NIS2 change la donne.",
+   "va": "dirigeants"
+  },
+  "direction": {
+   "msg": "Exactement, et c'est la grande nouveauté !",
+   "va": "dirigeants"
+  },
+  "dirigeants": {
+   "msg": "NIS2 demande aux organes de direction de valider les mesures de cybersécurité, d'en suivre la mise en œuvre, et de se former.",
+   "va": "pourquoi"
+  },
+  "pourquoi": {
+   "msg": "Pourquoi ? Parce que les décisions qui comptent sont souvent budgétaires ou organisationnelles : sauvegardes, remplacements, formations.",
+   "va": "salaries"
+  },
+  "salaries": {
+   "msg": "La directive encourage aussi la formation régulière de tout le personnel. Ces 2 minutes par jour en font partie !",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "La cybersécurité se décide en haut et se vit partout. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

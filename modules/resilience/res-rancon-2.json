@@ -1,0 +1,58 @@
+{
+ "id": "res-rancon-2",
+ "rubrique": "Résilience",
+ "theme": "Rançongiciel",
+ "titre": "Mise en situation : lundi, 8 h 30",
+ "reflexe": "Si je vois des fichiers renommés ou un message de rançon : je débranche le câble ou je coupe le Wi-Fi, je laisse l'ordinateur allumé, et j'appelle {{org.contact}}.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, fiche réflexe Rançongiciels",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/fiches-reflexes/rancongiciels-ransomwares"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "accueil",
+  "direction"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Lundi, 8 h 30. Un collègue t'appelle : « Mes fichiers ont tous une extension bizarre, et un message demande des bitcoins ! » Tu lui dis quoi ?",
+   "choix": [
+    {
+     "txt": "« Éteins tout ! »",
+     "va": "eteins"
+    },
+    {
+     "txt": "« Débranche le réseau ! »",
+     "va": "reseau"
+    }
+   ]
+  },
+  "eteins": {
+   "msg": "Le réflexe est compréhensible, mais éteindre peut effacer des traces utiles pour comprendre l'attaque. On isole plutôt du réseau.",
+   "va": "isoler"
+  },
+  "reseau": {
+   "msg": "Exactement ! Le câble réseau, ou le Wi-Fi coupé.",
+   "va": "isoler"
+  },
+  "isoler": {
+   "msg": "Isoler l'ordinateur empêche le rançongiciel de se propager aux autres postes et au serveur. Chaque minute compte.",
+   "va": "toucher"
+  },
+  "toucher": {
+   "msg": "Ensuite, on ne touche plus à rien : pas de « nettoyage » maison, pas de redémarrage, pas de réponse aux escrocs.",
+   "va": "prevenir"
+  },
+  "prevenir": {
+   "msg": "On prévient tout de suite {{org.contact}}, {{org.contact_detail}}. Et 17Cyber.gouv.fr guide pas à pas.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Isoler, ne plus toucher, prévenir. Ton collègue a eu le bon réflexe en t'appelant tout de suite ! 👋",
+   "fin": true
+  }
+ }
+}

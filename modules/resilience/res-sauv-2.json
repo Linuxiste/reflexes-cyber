@@ -1,0 +1,62 @@
+{
+ "id": "res-sauv-2",
+ "rubrique": "Résilience",
+ "theme": "Sauvegardes",
+ "titre": "La règle 3-2-1",
+ "reflexe": "Règle 3-2-1 : 3 copies de mes données, sur 2 supports différents, dont 1 hors du bureau ou hors ligne. Et je teste la restauration de temps en temps.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, les sauvegardes",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/sauvegardes"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction",
+  "finances"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Tu connais la règle 3-2-1 des sauvegardes ?",
+   "choix": [
+    {
+     "txt": "Oui",
+     "va": "oui"
+    },
+    {
+     "txt": "Non, explique",
+     "va": "explique"
+    }
+   ]
+  },
+  "oui": {
+   "msg": "Super, alors on vérifie ensemble !",
+   "va": "trois"
+  },
+  "explique": {
+   "msg": "C'est simple, promis. Trois chiffres.",
+   "va": "trois"
+  },
+  "trois": {
+   "msg": "3 copies de tes données : l'originale et deux sauvegardes.",
+   "va": "deux"
+  },
+  "deux": {
+   "msg": "2 supports différents : par exemple un disque externe et un service en ligne. Si l'un lâche, l'autre tient.",
+   "va": "un"
+  },
+  "un": {
+   "msg": "1 copie ailleurs : hors du bureau, ou hors ligne. En cas d'incendie, de vol ou de rançongiciel, elle reste intacte.",
+   "va": "test"
+  },
+  "test": {
+   "msg": "Et le secret que peu de gens connaissent : une sauvegarde qu'on n'a jamais essayé de restaurer n'est qu'un espoir. Teste de temps en temps.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "3 copies, 2 supports, 1 ailleurs, et un test de temps en temps. Demande à {{org.contact}} comment c'est fait chez {{org.nom_court}}. 👋",
+   "fin": true
+  }
+ }
+}

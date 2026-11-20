@@ -1,0 +1,58 @@
+{
+ "id": "nis2-incident-1",
+ "rubrique": "Obligations NIS 2",
+ "theme": "Incident : les premières heures",
+ "titre": "L'horloge de l'incident",
+ "reflexe": "Pour les structures concernées par NIS2, un incident grave se signale vite à l'ANSSI : une alerte sous 24 heures. D'où l'importance de prévenir tout de suite en interne.",
+ "source": {
+  "nom": "ANSSI, la directive NIS 2",
+  "url": "https://cyber.gouv.fr/la-directive-nis-2"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction"
+ ],
+ "statut": "brouillon",
+ "perime_le": "2027-05-20",
+ "etapes": {
+  "debut": {
+   "msg": "Un incident grave touche une organisation concernée par NIS2. À ton avis, elle a combien de temps pour donner une première alerte à l'ANSSI ?",
+   "choix": [
+    {
+     "txt": "Une semaine",
+     "va": "semaine"
+    },
+    {
+     "txt": "24 heures",
+     "va": "h24"
+    }
+   ]
+  },
+  "semaine": {
+   "msg": "C'est beaucoup plus court que ça !",
+   "va": "delais"
+  },
+  "h24": {
+   "msg": "Exactement, 24 heures !",
+   "va": "delais"
+  },
+  "delais": {
+   "msg": "NIS2 prévoit une alerte précoce sous 24 heures, une notification plus complète sous 72 heures, puis un rapport final dans le mois.",
+   "va": "toi"
+  },
+  "toi": {
+   "msg": "Et l'horloge démarre quand l'organisation a connaissance de l'incident. Si personne ne prévient en interne, on perd des heures précieuses.",
+   "va": "role"
+  },
+  "role": {
+   "msg": "C'est là que tu comptes : le moindre doute signalé tôt à {{org.contact}} permet à ta structure de réagir à temps.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "24 heures, ça va vite. Ton signalement rapide fait partie de la réponse. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

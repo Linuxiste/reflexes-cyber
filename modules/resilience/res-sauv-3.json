@@ -1,0 +1,81 @@
+{
+ "id": "res-sauv-3",
+ "rubrique": "Résilience",
+ "theme": "Sauvegardes",
+ "titre": "Quiz : sauvegarde ou pas ?",
+ "reflexe": "Un document synchronisé n'est pas toujours sauvegardé : s'il est effacé ou chiffré, la synchronisation peut propager le problème. Une vraie sauvegarde garde l'historique.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, les sauvegardes",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/sauvegardes"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Quiz ! Tes fichiers sont dans un dossier synchronisé sur Internet. C'est une sauvegarde ?",
+   "choix": [
+    {
+     "txt": "Oui, ils sont en ligne",
+     "va": "q1non"
+    },
+    {
+     "txt": "Pas forcément",
+     "va": "q1oui"
+    }
+   ]
+  },
+  "q1oui": {
+   "msg": "Bien vu ! Si tu effaces un fichier, la synchronisation l'efface aussi partout.",
+   "va": "q2"
+  },
+  "q1non": {
+   "msg": "Pas forcément : si un fichier est effacé ou chiffré, la synchronisation recopie le problème partout. Une sauvegarde garde les anciennes versions.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : ton disque de sauvegarde reste branché en permanence à l'ordinateur. Risqué ?",
+   "choix": [
+    {
+     "txt": "Oui, en cas de rançongiciel",
+     "va": "q2oui"
+    },
+    {
+     "txt": "Non, c'est pratique",
+     "va": "q2non"
+    }
+   ]
+  },
+  "q2oui": {
+   "msg": "Exactement !",
+   "va": "q3"
+  },
+  "q2non": {
+   "msg": "Pratique, mais un rançongiciel le chiffrerait avec le reste. On le débranche après la sauvegarde.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Dernière : quand as-tu vérifié pour la dernière fois que tu savais restaurer un fichier ?",
+   "choix": [
+    {
+     "txt": "Récemment",
+     "va": "fin"
+    },
+    {
+     "txt": "Jamais…",
+     "va": "jamais"
+    }
+   ]
+  },
+  "jamais": {
+   "msg": "Pas de souci, c'est le cas de beaucoup de monde ! Essaie cette semaine avec un fichier sans importance.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Synchroniser n'est pas sauvegarder, et une sauvegarde se teste. Bravo ! 👋",
+   "fin": true
+  }
+ }
+}

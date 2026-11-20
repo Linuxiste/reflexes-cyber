@@ -1,0 +1,62 @@
+{
+ "id": "nis2-intro-1",
+ "rubrique": "Obligations NIS 2",
+ "theme": "NIS2 en 2 minutes",
+ "titre": "La cybersécurité vient d'évoluer en France",
+ "reflexe": "NIS2 fait de la cybersécurité une obligation pour des milliers d'organisations en France, et ses exigences touchent aussi leurs partenaires et fournisseurs.",
+ "source": {
+  "nom": "ANSSI, la directive NIS 2",
+  "url": "https://cyber.gouv.fr/la-directive-nis-2"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction"
+ ],
+ "statut": "brouillon",
+ "perime_le": "2027-05-20",
+ "etapes": {
+  "debut": {
+   "msg": "Tu savais que la cybersécurité vient de beaucoup évoluer en France ?",
+   "choix": [
+    {
+     "txt": "Non, raconte !",
+     "va": "raconte"
+    },
+    {
+     "txt": "Oui, NIS2 !",
+     "va": "nis2"
+    }
+   ]
+  },
+  "raconte": {
+   "msg": "Alors voici l'essentiel en 2 minutes !",
+   "va": "quoi"
+  },
+  "nis2": {
+   "msg": "Bravo, tu suis l'actualité ! Petit rappel quand même…",
+   "va": "quoi"
+  },
+  "quoi": {
+   "msg": "NIS2 est une directive européenne sur la cybersécurité. En France, la loi qui l'applique, dite loi « Résilience », a été adoptée par l'Assemblée nationale en novembre 2026.",
+   "va": "qui"
+  },
+  "qui": {
+   "msg": "Avant, quelques centaines d'organisations étaient concernées. Avec NIS2, on passe à plus de 15 000 : entreprises, hôpitaux, collectivités…",
+   "va": "obligations"
+  },
+  "obligations": {
+   "msg": "Elles devront gérer leurs risques cyber, déclarer leurs incidents graves, et leurs dirigeants devront se former.",
+   "va": "petits"
+  },
+  "petits": {
+   "msg": "Ta structure n'est pas concernée directement ? Tes partenaires, tes clients ou tes financeurs peuvent l'être, et ils te poseront des questions.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "La cybersécurité devient une obligation, pas une option. Et tous les modules que tu as faits t'y préparent déjà ! 👋",
+   "fin": true
+  }
+ }
+}

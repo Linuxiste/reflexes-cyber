@@ -1,0 +1,58 @@
+{
+ "id": "res-sauv-1",
+ "rubrique": "Résilience",
+ "theme": "Sauvegardes",
+ "titre": "Et si ton ordinateur disparaissait ce soir ?",
+ "reflexe": "Mes documents importants existent en au moins deux endroits, dont un qui n'est pas branché en permanence. Une panne n'est alors qu'un mauvais moment.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, les sauvegardes",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/sauvegardes"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "benevoles",
+  "direction"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Salut, c'est {{perso}} ! Imagine : ce soir, ton ordinateur tombe en panne pour de bon. Qu'est-ce que tu perds ?",
+   "choix": [
+    {
+     "txt": "Pas grand-chose, tout est sauvegardé",
+     "va": "rien"
+    },
+    {
+     "txt": "Aïe… beaucoup de choses",
+     "va": "tout"
+    }
+   ]
+  },
+  "rien": {
+   "msg": "Bravo ! Vérifions quand même que ta sauvegarde résisterait au pire.",
+   "va": "pannes"
+  },
+  "tout": {
+   "msg": "Tu n'es pas seul : c'est souvent après une panne qu'on pense aux sauvegardes. Faisons-le avant !",
+   "va": "pannes"
+  },
+  "pannes": {
+   "msg": "Un disque qui lâche, un ordinateur volé, un café renversé, un rançongiciel… Les causes sont nombreuses, et elles arrivent sans prévenir.",
+   "va": "deux"
+  },
+  "deux": {
+   "msg": "La règle de base : tes documents importants doivent exister en au moins deux endroits. Ton ordinateur, plus une sauvegarde.",
+   "va": "debranche"
+  },
+  "debranche": {
+   "msg": "Et une copie doit être débranchée ou hors ligne : un rançongiciel chiffre tout ce qui est branché, y compris le disque de sauvegarde.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Deux endroits, dont un débranché. Demain, la règle 3-2-1 en 2 minutes. 👋",
+   "fin": true
+  }
+ }
+}

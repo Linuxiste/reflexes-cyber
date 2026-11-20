@@ -1,0 +1,58 @@
+{
+ "id": "gou-partage-2",
+ "rubrique": "Gouvernance",
+ "theme": "Partage de fichiers",
+ "titre": "« Toute personne disposant du lien »",
+ "reflexe": "Quand je partage un document, je choisis des personnes précises plutôt que « toute personne disposant du lien », et je mets une date de fin si je peux.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, 10 mesures essentielles",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/10-mesures-essentielles-assurer-securite-numerique"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "accueil",
+  "rh"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Tu partages un dossier avec un partenaire. L'outil propose : « Toute personne disposant du lien peut voir ». Tu choisis ça ?",
+   "choix": [
+    {
+     "txt": "Oui, c'est le plus simple",
+     "va": "simple"
+    },
+    {
+     "txt": "Je préfère choisir les personnes",
+     "va": "personnes"
+    }
+   ]
+  },
+  "simple": {
+   "msg": "C'est le plus simple, oui. Mais le lien peut être transféré, oublié dans un mail, ou publié par erreur. Et n'importe qui peut ouvrir le dossier.",
+   "va": "mieux"
+  },
+  "personnes": {
+   "msg": "Excellent réflexe !",
+   "va": "mieux"
+  },
+  "mieux": {
+   "msg": "Le mieux : partager avec les adresses précises des personnes concernées. Seules elles pourront ouvrir le dossier.",
+   "va": "date"
+  },
+  "date": {
+   "msg": "Encore mieux : mettre une date de fin au partage, ou le retirer quand le projet est terminé.",
+   "va": "menage"
+  },
+  "menage": {
+   "msg": "Et de temps en temps, un petit ménage dans tes partages : on est souvent surpris de ce qui est encore ouvert !",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Des personnes précises, une date de fin, et un peu de ménage. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

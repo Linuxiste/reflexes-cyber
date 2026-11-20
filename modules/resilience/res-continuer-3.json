@@ -1,0 +1,81 @@
+{
+ "id": "res-continuer-3",
+ "rubrique": "Résilience",
+ "theme": "Continuer sans informatique",
+ "titre": "Quiz : prêt pour la panne ?",
+ "reflexe": "Être prêt, c'est simple : une liste de contacts imprimée, des sauvegardes testées et une idée claire de qui fait quoi si tout s'arrête.",
+ "source": {
+  "nom": "ANSSI, organiser un exercice de gestion de crise cyber",
+  "url": "https://cyber.gouv.fr/publications/organiser-un-exercice-de-gestion-de-crise-cyber"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Quiz ! Où ranger la liste des contacts d'urgence ?",
+   "choix": [
+    {
+     "txt": "Imprimée, dans un endroit connu",
+     "va": "q1oui"
+    },
+    {
+     "txt": "Dans un fichier sur le serveur",
+     "va": "q1non"
+    }
+   ]
+  },
+  "q1oui": {
+   "msg": "Oui ! Accessible même quand tout est en panne.",
+   "va": "q2"
+  },
+  "q1non": {
+   "msg": "Si le serveur est en panne, la liste aussi ! On la garde aussi imprimée.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : pendant un incident, tu remarques quelque chose d'étrange. Tu fais quoi ?",
+   "choix": [
+    {
+     "txt": "Je le note avec l'heure",
+     "va": "q2oui"
+    },
+    {
+     "txt": "Je n'y pense plus",
+     "va": "q2non"
+    }
+   ]
+  },
+  "q2oui": {
+   "msg": "Parfait, c'est très utile pour l'enquête.",
+   "va": "q3"
+  },
+  "q2non": {
+   "msg": "Note-le avec l'heure : un détail peut aider à comprendre l'attaque.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Dernière : s'entraîner à une panne, c'est utile ?",
+   "choix": [
+    {
+     "txt": "Oui, comme un exercice d'évacuation",
+     "va": "fin"
+    },
+    {
+     "txt": "Non, on verra le jour J",
+     "va": "jourj"
+    }
+   ]
+  },
+  "jourj": {
+   "msg": "Comme pour un incendie, on réagit bien mieux quand on s'est entraîné une fois. Même 30 minutes autour d'une table.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Bravo, tu as terminé la rubrique Résilience ! 👋",
+   "fin": true
+  }
+ }
+}

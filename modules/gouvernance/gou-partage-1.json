@@ -1,0 +1,67 @@
+{
+ "id": "gou-partage-1",
+ "rubrique": "Gouvernance",
+ "theme": "Partage de fichiers",
+ "titre": "Le document de travail sur mon cloud perso",
+ "reflexe": "Les documents de {{org.nom_court}} restent sur les outils fournis par {{org.nom_court}}, pas sur mon cloud ou ma messagerie personnels.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, 10 mesures essentielles",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/10-mesures-essentielles-assurer-securite-numerique"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "benevoles",
+  "direction"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Pour finir un dossier chez toi, tu l'envoies sur ta boîte mail personnelle ou ton cloud perso. Ça te paraît…",
+   "choix": [
+    {
+     "txt": "Pratique, je le fais souvent",
+     "va": "souvent"
+    },
+    {
+     "txt": "Risqué",
+     "va": "risque"
+    }
+   ]
+  },
+  "souvent": {
+   "msg": "C'est très courant, et c'est fait pour bien faire ! Mais voyons ce que ça change.",
+   "va": "pourquoi"
+  },
+  "risque": {
+   "msg": "Tu as raison. Tu sais pourquoi ?",
+   "choix": [
+    {
+     "txt": "On perd le contrôle du document",
+     "va": "pourquoi"
+    },
+    {
+     "txt": "Pas vraiment",
+     "va": "pourquoi"
+    }
+   ]
+  },
+  "pourquoi": {
+   "msg": "Sur ton compte personnel, le document échappe aux protections de {{org.nom_court}} : sauvegardes, droits d'accès, fermeture des comptes au départ.",
+   "va": "perso"
+  },
+  "perso": {
+   "msg": "Et si ton compte personnel est piraté un jour, les documents de travail partent avec.",
+   "va": "solution"
+  },
+  "solution": {
+   "msg": "La solution : demande à {{org.contact}} comment travailler à distance avec les outils de {{org.nom_court}}. Il y a souvent une solution simple.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Les documents de travail restent sur les outils de travail. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

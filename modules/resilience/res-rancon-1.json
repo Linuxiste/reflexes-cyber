@@ -1,0 +1,61 @@
+{
+ "id": "res-rancon-1",
+ "rubrique": "Résilience",
+ "theme": "Rançongiciel",
+ "titre": "Le message qui réclame une rançon",
+ "reflexe": "Rançongiciel : je débranche le réseau, je ne paie pas, je ne touche plus à rien, et je préviens tout de suite.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, fiche réflexe Rançongiciels",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/fiches-reflexes/rancongiciels-ransomwares"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Un rançongiciel, tu sais ce que c'est ?",
+   "choix": [
+    {
+     "txt": "Oui, un virus qui bloque tout",
+     "va": "oui"
+    },
+    {
+     "txt": "Pas vraiment",
+     "va": "non"
+    }
+   ]
+  },
+  "oui": {
+   "msg": "Exactement. Voyons comment il entre, et comment réagir.",
+   "va": "quoi"
+  },
+  "non": {
+   "msg": "C'est un logiciel malveillant qui rend tes fichiers illisibles, puis réclame de l'argent pour les « rendre ».",
+   "va": "quoi"
+  },
+  "quoi": {
+   "msg": "Il entre souvent par une pièce jointe piégée, un lien, un mot de passe volé ou un logiciel pas à jour. Tout ce qu'on a vu dans les autres modules !",
+   "va": "cible"
+  },
+  "cible": {
+   "msg": "Les petites structures sont très visées : elles ont moins de protections, et elles ont besoin de leurs fichiers pour fonctionner.",
+   "va": "payer"
+  },
+  "payer": {
+   "msg": "Faut-il payer ? Non. Rien ne garantit que les fichiers seront rendus, et ça finance de nouvelles attaques.",
+   "va": "parade"
+  },
+  "parade": {
+   "msg": "La meilleure parade, c'est une sauvegarde débranchée : avec elle, une attaque devient un mauvais moment, pas une catastrophe.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Débrancher, ne pas payer, prévenir. Et avoir une sauvegarde débranchée. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

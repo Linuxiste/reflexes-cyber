@@ -1,0 +1,68 @@
+{
+ "id": "nis2-incident-2",
+ "rubrique": "Obligations NIS 2",
+ "theme": "Incident : les premières heures",
+ "titre": "Mise en situation : vendredi, 17 h 45",
+ "reflexe": "Un incident n'attend pas lundi : je préviens tout de suite, même un vendredi soir, avec ce que j'ai vu et l'heure.",
+ "source": {
+  "nom": "ANSSI, la directive NIS 2",
+  "url": "https://cyber.gouv.fr/la-directive-nis-2"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction",
+  "accueil"
+ ],
+ "statut": "brouillon",
+ "perime_le": "2027-05-20",
+ "etapes": {
+  "debut": {
+   "msg": "Vendredi, 17 h 45. Tu vois des connexions bizarres à ta messagerie depuis l'étranger. Tu pars en week-end dans 15 minutes. Tu fais quoi ?",
+   "choix": [
+    {
+     "txt": "Je préviens tout de suite",
+     "va": "tout_suite"
+    },
+    {
+     "txt": "J'en parlerai lundi",
+     "va": "lundi"
+    }
+   ]
+  },
+  "lundi": {
+   "msg": "Le week-end, c'est justement le moment préféré des attaquants : il y a moins de monde pour réagir. Lundi, ce serait 60 heures de perdues.",
+   "va": "quoi"
+  },
+  "tout_suite": {
+   "msg": "Parfait ! Et tu dis quoi ?",
+   "choix": [
+    {
+     "txt": "Ce que j'ai vu, avec l'heure",
+     "va": "quoi"
+    },
+    {
+     "txt": "Juste « ça ne marche pas »",
+     "va": "quoi"
+    }
+   ]
+  },
+  "quoi": {
+   "msg": "Le plus utile : ce que tu as vu, à quelle heure, sur quel compte ou quel appareil. Une capture d'écran aide aussi.",
+   "va": "qui"
+  },
+  "qui": {
+   "msg": "Préviens {{org.contact}}, {{org.contact_detail}}. S'il n'y a personne, suis la procédure d'urgence prévue, ou 17Cyber.gouv.fr.",
+   "va": "mdp"
+  },
+  "mdp": {
+   "msg": "Et si c'est ton compte, change ton mot de passe tout de suite depuis un autre appareil.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Un doute un vendredi soir mérite 5 minutes avant de partir. Bon week-end, l'esprit tranquille ! 👋",
+   "fin": true
+  }
+ }
+}

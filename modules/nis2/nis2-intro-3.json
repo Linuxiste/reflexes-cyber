@@ -1,0 +1,84 @@
+{
+ "id": "nis2-intro-3",
+ "rubrique": "Obligations NIS 2",
+ "theme": "NIS2 en 2 minutes",
+ "titre": "Quiz : NIS2",
+ "reflexe": "Pour savoir si ma structure est concernée par NIS2, l'ANSSI propose un test en ligne sur MonEspaceNIS2.",
+ "source": {
+  "nom": "ANSSI, MonEspaceNIS2",
+  "url": "https://monespacenis2.cyber.gouv.fr/"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction"
+ ],
+ "statut": "brouillon",
+ "perime_le": "2027-05-20",
+ "etapes": {
+  "debut": {
+   "msg": "Quiz ! NIS2, c'est…",
+   "choix": [
+    {
+     "txt": "Une directive européenne sur la cybersécurité",
+     "va": "q1oui"
+    },
+    {
+     "txt": "Un nouveau logiciel",
+     "va": "q1non"
+    }
+   ]
+  },
+  "q1oui": {
+   "msg": "Exact !",
+   "va": "q2"
+  },
+  "q1non": {
+   "msg": "C'est une directive européenne sur la cybersécurité, appliquée en France par une loi.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : combien d'organisations sont concernées en France, environ ?",
+   "choix": [
+    {
+     "txt": "Plus de 15 000",
+     "va": "q2oui"
+    },
+    {
+     "txt": "Une centaine",
+     "va": "q2non"
+    }
+   ]
+  },
+  "q2oui": {
+   "msg": "Oui, contre quelques centaines avant.",
+   "va": "q3"
+  },
+  "q2non": {
+   "msg": "C'était à peu près le cas avant. Avec NIS2, on passe à plus de 15 000.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Dernière : comment savoir si ta structure est concernée ?",
+   "choix": [
+    {
+     "txt": "Le test de l'ANSSI sur MonEspaceNIS2",
+     "va": "fin"
+    },
+    {
+     "txt": "Attendre un courrier",
+     "va": "courrier"
+    }
+   ]
+  },
+  "courrier": {
+   "msg": "Mieux vaut ne pas attendre : l'ANSSI propose un test en ligne sur MonEspaceNIS2.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Le test MonEspaceNIS2 prend quelques minutes. Parles-en à ta direction ! 👋",
+   "fin": true
+  }
+ }
+}

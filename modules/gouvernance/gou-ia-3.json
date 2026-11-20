@@ -1,0 +1,81 @@
+{
+ "id": "gou-ia-3",
+ "rubrique": "Gouvernance",
+ "theme": "IA générative",
+ "titre": "Quiz : l'IA et moi",
+ "reflexe": "Pas de données personnelles ni confidentielles dans une IA en ligne, une vérification de tout ce qu'elle produit, et seulement les outils autorisés.",
+ "source": {
+  "nom": "CNIL, intelligence artificielle",
+  "url": "https://www.cnil.fr/fr/intelligence-artificielle"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Quiz ! Tu peux demander à une IA de reformuler un mail…",
+   "choix": [
+    {
+     "txt": "Sans noms ni détails personnels",
+     "va": "q1oui"
+    },
+    {
+     "txt": "Avec toutes les infos, c'est plus précis",
+     "va": "q1non"
+    }
+   ]
+  },
+  "q1oui": {
+   "msg": "Parfait : sans données personnelles, aucun souci.",
+   "va": "q2"
+  },
+  "q1non": {
+   "msg": "Plus précis, mais tes informations partent chez l'éditeur de l'IA. On retire les noms et les détails d'abord.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : un message vocal de ta directrice te demande un virement urgent. Ça pourrait être une IA qui imite sa voix ?",
+   "choix": [
+    {
+     "txt": "Oui, c'est possible",
+     "va": "q2oui"
+    },
+    {
+     "txt": "Non, impossible",
+     "va": "q2non"
+    }
+   ]
+  },
+  "q2oui": {
+   "msg": "Oui : imiter une voix est devenu facile. D'où le réflexe de rappeler sur un numéro connu.",
+   "va": "q3"
+  },
+  "q2non": {
+   "msg": "C'est devenu facile, hélas. Une demande inhabituelle se vérifie en rappelant sur un numéro connu, même si la voix est familière.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Dernière : qui décide des outils d'IA utilisables au travail ?",
+   "choix": [
+    {
+     "txt": "{{org.nom_court}}, avec {{org.contact}}",
+     "va": "fin"
+    },
+    {
+     "txt": "Chacun choisit le sien",
+     "va": "chacun"
+    }
+   ]
+  },
+  "chacun": {
+   "msg": "Chacun son outil, c'est chacun ses risques. On utilise ceux que {{org.nom_court}} a choisis et vérifiés.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Bravo, tu as terminé la rubrique Gouvernance ! 👋",
+   "fin": true
+  }
+ }
+}

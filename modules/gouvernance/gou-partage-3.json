@@ -1,0 +1,81 @@
+{
+ "id": "gou-partage-3",
+ "rubrique": "Gouvernance",
+ "theme": "Partage de fichiers",
+ "titre": "Quiz : partager sans fuiter",
+ "reflexe": "Avant d'envoyer un document, je vérifie le destinataire, ce que contient le document, et le bon outil pour l'envoyer.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, 10 mesures essentielles",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/10-mesures-essentielles-assurer-securite-numerique"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Quiz ! Avant d'envoyer un document sensible par mail, tu vérifies quoi en premier ?",
+   "choix": [
+    {
+     "txt": "L'adresse du destinataire",
+     "va": "q1oui"
+    },
+    {
+     "txt": "La couleur du document",
+     "va": "q1non"
+    }
+   ]
+  },
+  "q1oui": {
+   "msg": "Oui ! La saisie automatique propose parfois la mauvaise personne.",
+   "va": "q2"
+  },
+  "q1non": {
+   "msg": "Ha ha ! L'adresse du destinataire d'abord : la saisie automatique propose parfois un homonyme.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : tu envoies un mail au mauvais destinataire avec des données personnelles. Tu fais quoi ?",
+   "choix": [
+    {
+     "txt": "Je préviens {{org.contact}}",
+     "va": "q2oui"
+    },
+    {
+     "txt": "Je ne dis rien",
+     "va": "q2non"
+    }
+   ]
+  },
+  "q2oui": {
+   "msg": "Bravo : une fuite de données doit parfois être déclarée, et vite.",
+   "va": "q3"
+  },
+  "q2non": {
+   "msg": "Une erreur, ça arrive. Mais il faut prévenir vite : certaines fuites doivent être déclarées sous 72 heures.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Dernière : un gros fichier à envoyer à un partenaire. Tu utilises…",
+   "choix": [
+    {
+     "txt": "L'outil fourni par {{org.nom_court}}",
+     "va": "fin"
+    },
+    {
+     "txt": "Le premier site gratuit trouvé",
+     "va": "gratuit"
+    }
+   ]
+  },
+  "gratuit": {
+   "msg": "Un site inconnu peut garder une copie de ton fichier. Demande l'outil prévu à {{org.contact}}.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Le bon destinataire, le bon outil, et une alerte rapide en cas d'erreur. Bravo ! 👋",
+   "fin": true
+  }
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "id": "res-continuer-2",
+ "rubrique": "Résilience",
+ "theme": "Continuer sans informatique",
+ "titre": "Mise en situation : la messagerie est coupée",
+ "reflexe": "Pendant un incident, je communique par un autre moyen (téléphone, SMS) et je me méfie des messages qui profitent de la confusion.",
+ "source": {
+  "nom": "ANSSI, organiser un exercice de gestion de crise cyber",
+  "url": "https://cyber.gouv.fr/publications/organiser-un-exercice-de-gestion-de-crise-cyber"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Suite à une attaque, la messagerie de {{org.nom_court}} est coupée. Un SMS arrive : « Ici le support, cliquez ici pour réactiver votre compte ». Tu cliques ?",
+   "choix": [
+    {
+     "txt": "Oui, il faut bien réactiver",
+     "va": "clic"
+    },
+    {
+     "txt": "Je vérifie d'abord",
+     "va": "verifie"
+    }
+   ]
+  },
+  "clic": {
+   "msg": "C'est très bien imité, mais les escrocs adorent profiter des moments de confusion. Une crise est le moment idéal pour eux.",
+   "va": "canal"
+  },
+  "verifie": {
+   "msg": "Excellent ! Comment vérifierais-tu ?",
+   "choix": [
+    {
+     "txt": "J'appelle {{org.contact}}",
+     "va": "canal"
+    },
+    {
+     "txt": "Je réponds au SMS",
+     "va": "repond"
+    }
+   ]
+  },
+  "repond": {
+   "msg": "Répondre à l'expéditeur ne prouve rien. On appelle plutôt un numéro connu.",
+   "va": "canal"
+  },
+  "canal": {
+   "msg": "Pendant un incident, les consignes officielles arrivent par un canal prévu à l'avance : un appel, un SMS d'un numéro connu, une réunion.",
+   "va": "calme"
+  },
+  "calme": {
+   "msg": "Et on garde son calme : on note ce qu'on a vu, avec l'heure. C'est précieux pour ceux qui réparent.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "En crise, je passe par les canaux connus, et je me méfie encore plus. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

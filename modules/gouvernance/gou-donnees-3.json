@@ -1,0 +1,81 @@
+{
+ "id": "gou-donnees-3",
+ "rubrique": "Gouvernance",
+ "theme": "Données personnelles",
+ "titre": "Quiz : les données des personnes",
+ "reflexe": "Chacun a le droit de savoir quelles données on garde sur lui et de les faire corriger. Si quelqu'un le demande, je transmets vite à la bonne personne.",
+ "source": {
+  "nom": "CNIL, les droits pour maîtriser vos données personnelles",
+  "url": "https://www.cnil.fr/fr/les-droits-pour-maitriser-vos-donnees-personnelles"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Quiz ! Une personne demande quelles informations {{org.nom_court}} garde sur elle. Elle a le droit ?",
+   "choix": [
+    {
+     "txt": "Oui",
+     "va": "q1oui"
+    },
+    {
+     "txt": "Non",
+     "va": "q1non"
+    }
+   ]
+  },
+  "q1oui": {
+   "msg": "Oui, c'est le droit d'accès du RGPD.",
+   "va": "q2"
+  },
+  "q1non": {
+   "msg": "Si, c'est le droit d'accès du RGPD. Elle peut aussi faire corriger les informations fausses.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : tu reçois cette demande. Tu fais quoi ?",
+   "choix": [
+    {
+     "txt": "Je la transmets à la personne responsable",
+     "va": "q2oui"
+    },
+    {
+     "txt": "Je la laisse de côté",
+     "va": "q2non"
+    }
+   ]
+  },
+  "q2oui": {
+   "msg": "Parfait : il y a un délai pour répondre, en général un mois.",
+   "va": "q3"
+  },
+  "q2non": {
+   "msg": "Il faut répondre dans un délai d'un mois en général : transmets-la vite à la personne responsable.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Dernière : un tableau avec les coordonnées de toutes les personnes accompagnées traîne sur le bureau partagé de l'ordinateur. Normal ?",
+   "choix": [
+    {
+     "txt": "Non, il faut le ranger et le protéger",
+     "va": "fin"
+    },
+    {
+     "txt": "Oui, c'est pratique",
+     "va": "pratique"
+    }
+   ]
+  },
+  "pratique": {
+   "msg": "Pratique, mais visible par tous ceux qui utilisent ce poste. Range-le dans un dossier dont l'accès est limité.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Les données des personnes se protègent comme on protège les personnes. Bravo ! 👋",
+   "fin": true
+  }
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "id": "gou-donnees-2",
+ "rubrique": "Gouvernance",
+ "theme": "Données personnelles",
+ "titre": "Mise en situation : le mail à tous les adhérents",
+ "reflexe": "Pour écrire à un groupe de personnes extérieures, je mets les adresses en copie cachée (Cci), pour que chacun ne voie pas les adresses des autres.",
+ "source": {
+  "nom": "CNIL, le RGPD : de quoi parle-t-on ?",
+  "url": "https://www.cnil.fr/fr/rgpd-de-quoi-parle-t-on"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "benevoles",
+  "accueil"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Tu envoies l'invitation à l'assemblée générale aux 120 adhérents. Tu mets les adresses où ?",
+   "choix": [
+    {
+     "txt": "Dans « À », toutes ensemble",
+     "va": "a"
+    },
+    {
+     "txt": "En copie cachée (Cci)",
+     "va": "cci"
+    }
+   ]
+  },
+  "a": {
+   "msg": "C'est très courant ! Mais alors, chaque adhérent reçoit les 119 autres adresses.",
+   "va": "probleme"
+  },
+  "cci": {
+   "msg": "Parfait ! Tu sais pourquoi c'est mieux ?",
+   "choix": [
+    {
+     "txt": "Pour protéger les adresses",
+     "va": "probleme"
+    },
+    {
+     "txt": "Pas vraiment",
+     "va": "probleme"
+    }
+   ]
+  },
+  "probleme": {
+   "msg": "Une adresse mail est une donnée personnelle. Certains ne veulent pas que leur adhésion se sache, et une liste d'adresses visible intéresse les escrocs.",
+   "va": "repondre"
+  },
+  "repondre": {
+   "msg": "En plus, avec « Répondre à tous », une réponse part chez 120 personnes. En copie cachée, elle n'arrive qu'à toi.",
+   "va": "astuce"
+  },
+  "astuce": {
+   "msg": "L'astuce : mets ta propre adresse dans « À », et toutes les autres dans « Cci ».",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Un mail à un groupe extérieur ? Les adresses en copie cachée. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

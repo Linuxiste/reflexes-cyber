@@ -1,0 +1,60 @@
+{
+ "id": "gou-donnees-1",
+ "rubrique": "Gouvernance",
+ "theme": "Données personnelles",
+ "titre": "Une donnée personnelle, c'est quoi ?",
+ "reflexe": "Une donnée personnelle, c'est toute information qui permet de reconnaître une personne. Je n'en collecte et je n'en partage que le strict nécessaire.",
+ "source": {
+  "nom": "CNIL, le RGPD : de quoi parle-t-on ?",
+  "url": "https://www.cnil.fr/fr/rgpd-de-quoi-parle-t-on"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "rh",
+  "soin",
+  "educatif",
+  "accueil"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Question : parmi ces informations, laquelle est une donnée personnelle ? Un nom, un numéro de téléphone, une photo…",
+   "choix": [
+    {
+     "txt": "Seulement le nom",
+     "va": "nom"
+    },
+    {
+     "txt": "Les trois",
+     "va": "trois"
+    }
+   ]
+  },
+  "nom": {
+   "msg": "Le nom, oui, mais pas seulement ! Le téléphone et la photo aussi.",
+   "va": "definition"
+  },
+  "trois": {
+   "msg": "Exactement, les trois !",
+   "va": "definition"
+  },
+  "definition": {
+   "msg": "Une donnée personnelle, c'est toute information qui permet de reconnaître quelqu'un, directement ou en croisant plusieurs informations.",
+   "va": "sensible"
+  },
+  "sensible": {
+   "msg": "Certaines sont encore plus sensibles : la santé, la situation sociale, l'origine, les opinions. Elles demandent une attention particulière.",
+   "va": "moins"
+  },
+  "moins": {
+   "msg": "La règle d'or du RGPD : ne collecter que ce qui est vraiment utile, et ne le montrer qu'à ceux qui en ont besoin pour leur travail.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Le strict nécessaire, aux seules personnes concernées. C'est du respect avant d'être une loi. 👋",
+   "fin": true
+  }
+ }
+}

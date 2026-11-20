@@ -1,0 +1,82 @@
+{
+ "id": "nis2-incident-3",
+ "rubrique": "Obligations NIS 2",
+ "theme": "Incident : les premières heures",
+ "titre": "Quiz final : les premières heures",
+ "reflexe": "Signaler vite, décrire ce que j'ai vu, ne rien effacer et ne pas payer : c'est la meilleure aide que je puisse apporter pendant un incident.",
+ "source": {
+  "nom": "ANSSI, la directive NIS 2",
+  "url": "https://cyber.gouv.fr/la-directive-nis-2"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "perime_le": "2027-05-20",
+ "etapes": {
+  "debut": {
+   "msg": "Dernier quiz de toute la série ! Pendant un incident, effacer les mails suspects pour « nettoyer », c'est…",
+   "choix": [
+    {
+     "txt": "Une mauvaise idée",
+     "va": "q1oui"
+    },
+    {
+     "txt": "Une bonne idée",
+     "va": "q1non"
+    }
+   ]
+  },
+  "q1oui": {
+   "msg": "Oui : ce sont des indices pour l'enquête.",
+   "va": "q2"
+  },
+  "q1non": {
+   "msg": "Ce sont des indices précieux pour comprendre l'attaque. On les garde, et on les montre à {{org.contact}}.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : qui doit être prévenu en premier ?",
+   "choix": [
+    {
+     "txt": "{{org.contact}}",
+     "va": "q2oui"
+    },
+    {
+     "txt": "Mes amis sur les réseaux sociaux",
+     "va": "q2non"
+    }
+   ]
+  },
+  "q2oui": {
+   "msg": "Exact.",
+   "va": "q3"
+  },
+  "q2non": {
+   "msg": "Surtout pas sur les réseaux sociaux ! On prévient {{org.contact}}, qui organise la suite.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Dernière question : signaler une erreur qu'on a faite soi-même, c'est…",
+   "choix": [
+    {
+     "txt": "Courageux et utile",
+     "va": "fin"
+    },
+    {
+     "txt": "Risqué pour moi",
+     "va": "risque"
+    }
+   ]
+  },
+  "risque": {
+   "msg": "Au contraire : signaler vite est le meilleur service à rendre. Une erreur cachée coûte bien plus cher qu'une erreur signalée.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Bravo, tu as terminé les 60 modules de base ! Tes réflexes cyber sont en place. Merci, et à bientôt pour les actualités ! 🪂",
+   "fin": true
+  }
+ }
+}
