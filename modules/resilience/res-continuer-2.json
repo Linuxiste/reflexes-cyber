@@ -14,7 +14,7 @@
  "prioritaire_pour": [
   "direction"
  ],
- "statut": "brouillon",
+ "statut": "publie",
  "etapes": {
   "debut": {
    "msg": "Suite à une attaque, la messagerie de {{org.nom_court}} est coupée. Un SMS arrive : « Ici le support, cliquez ici pour réactiver votre compte ». Tu cliques ?",

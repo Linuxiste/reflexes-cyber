@@ -16,7 +16,7 @@
   "educatif",
   "accueil"
  ],
- "statut": "brouillon",
+ "statut": "publie",
  "etapes": {
   "debut": {
    "msg": "Dis-moi : dans {{org.nom_court}}, il y a une boîte mail ou un logiciel dont tout le monde connaît le même mot de passe ?",

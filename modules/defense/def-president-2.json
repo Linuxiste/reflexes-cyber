@@ -15,7 +15,7 @@
   "direction",
   "finances"
  ],
- "statut": "brouillon",
+ "statut": "publie",
  "etapes": {
   "debut": {
    "msg": "Mail d'un fournisseur habituel : « Nous changeons de banque, voici notre nouveau RIB pour la prochaine facture. » Tu mets à jour ?",

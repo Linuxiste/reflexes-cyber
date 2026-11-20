@@ -12,7 +12,7 @@
   "tous"
  ],
  "prioritaire_pour": [],
- "statut": "brouillon",
+ "statut": "publie",
  "etapes": {
   "debut": {
    "msg": "Quiz ! Une personne demande quelles informations {{org.nom_court}} garde sur elle. Elle a le droit ?",

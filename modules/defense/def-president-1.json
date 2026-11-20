@@ -15,7 +15,7 @@
   "direction",
   "finances"
  ],
- "statut": "brouillon",
+ "statut": "publie",
  "etapes": {
   "debut": {
    "msg": "Mail de {{org.presidence}} : « Je suis en réunion, peux-tu faire un virement urgent à ce fournisseur ? C'est confidentiel, n'en parle à personne. » Tu fais quoi ?",

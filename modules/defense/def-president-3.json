@@ -15,7 +15,7 @@
   "direction",
   "finances"
  ],
- "statut": "brouillon",
+ "statut": "publie",
  "etapes": {
   "debut": {
    "msg": "Quiz ! Une demande de virement arrive par mail, avec la signature de {{org.presidence}}. La signature prouve que c'est lui ?",

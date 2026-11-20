@@ -15,7 +15,7 @@
   "finances",
   "direction"
  ],
- "statut": "brouillon",
+ "statut": "publie",
  "etapes": {
   "debut": {
    "msg": "Le téléphone sonne. « Bonjour, service fraude de votre banque. Une opération suspecte est en cours. » La personne connaît ton nom. Tu la crois ?",

@@ -15,7 +15,7 @@
   "benevoles",
   "direction"
  ],
- "statut": "brouillon",
+ "statut": "publie",
  "etapes": {
   "debut": {
    "msg": "Salut, c'est {{perso}} ! Imagine : ce soir, ton ordinateur tombe en panne pour de bon. Qu'est-ce que tu perds ?",

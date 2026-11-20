@@ -15,7 +15,7 @@
   "accueil",
   "rh"
  ],
- "statut": "brouillon",
+ "statut": "publie",
  "etapes": {
   "debut": {
    "msg": "Salut, c'est {{perso}} ! Petite question : un mail te dit « Votre colis est bloqué, cliquez ici ». Tu fais quoi ?",
