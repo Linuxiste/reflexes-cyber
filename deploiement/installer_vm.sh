@@ -1,7 +1,7 @@
 #!/bin/sh
 # Installe « Réflexes cyber » sur une VM Debian 12 ou 13 neuve (1 vCPU, 1 Go de RAM, 10 Go de disque suffisent).
 # Usage, en root sur la VM :  sh installer_vm.sh <url-du-dépôt-git> [organisation]
-# L'organisation privée (ex. fondation-cognacq-jay) se copie à part dans organisations/ AVANT de lancer la construction.
+# L'organisation privée (ex. ma-structure) se copie à part dans organisations/ AVANT de lancer la construction.
 set -eu
 DEPOT="${1:?usage : sh installer_vm.sh <url-du-depot-git> [organisation]}"
 ORG="${2:-exemple}"
