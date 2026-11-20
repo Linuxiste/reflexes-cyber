@@ -1,0 +1,58 @@
+{
+ "id": "pro-wifi-1",
+ "rubrique": "Protection",
+ "theme": "Wi-Fi et déplacements",
+ "titre": "Le Wi-Fi gratuit de la gare",
+ "reflexe": "Sur un Wi-Fi public, j'évite les comptes sensibles. Je préfère le partage de connexion de mon téléphone, ou le VPN fourni par {{org.nom_court}}.",
+ "source": {
+  "nom": "ANSSI, recommandations sur le nomadisme numérique",
+  "url": "https://cyber.gouv.fr/publications/recommandations-sur-le-nomadisme-numerique"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction",
+  "soin"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Tu attends ton train. Un réseau « Gare_WiFi_Gratuit » est disponible. Tu t'y connectes pour finir un dossier de travail ?",
+   "choix": [
+    {
+     "txt": "Oui, c'est gratuit",
+     "va": "oui"
+    },
+    {
+     "txt": "J'hésite",
+     "va": "hesite"
+    }
+   ]
+  },
+  "oui": {
+   "msg": "C'est tentant ! Mais n'importe qui peut créer un réseau qui s'appelle « Gare_WiFi_Gratuit », avec son propre ordinateur.",
+   "va": "faux"
+  },
+  "hesite": {
+   "msg": "Tu as raison d'hésiter. Voilà pourquoi.",
+   "va": "faux"
+  },
+  "faux": {
+   "msg": "Sur un faux réseau, ou sur un vrai réseau mal protégé, quelqu'un peut observer ce qui passe, ou te présenter une fausse page de connexion.",
+   "va": "alternative"
+  },
+  "alternative": {
+   "msg": "La solution la plus simple : le partage de connexion de ton téléphone. C'est ton propre réseau, protégé par ton mot de passe.",
+   "va": "vpn"
+  },
+  "vpn": {
+   "msg": "Si {{org.nom_court}} fournit un VPN, active-le : il crée un tunnel chiffré jusqu'au bureau, même sur un Wi-Fi douteux.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Wi-Fi public : pas de compte sensible. Partage de connexion ou VPN. Bon voyage ! 👋",
+   "fin": true
+  }
+ }
+}

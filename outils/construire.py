@@ -224,7 +224,9 @@ def construire(org: str, verifier: bool) -> int:
     scenarios = []
     for f in sorted((RACINE / "scenarios").glob("*.json")):
         try:
-            s = substituer(json.loads(f.read_text(encoding="utf-8")), valeurs, str(f.relative_to(RACINE)))
+            brut = json.loads(f.read_text(encoding="utf-8"))
+            brut.pop("message", None)        # faux message : traité par outils/kit_campagne.py, pas publié sur le site
+            s = substituer(brut, valeurs, str(f.relative_to(RACINE)))
             if s["slug"] != f.stem:
                 raise Refus(f"{f.name} : slug différent du nom du fichier")
             if s["module"] not in {m["id"] for _, m, _ in modules}:

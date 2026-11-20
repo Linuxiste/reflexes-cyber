@@ -2,6 +2,7 @@
 
 À utiliser **uniquement** après l'accord écrit de la direction ([accord-campagne.md](accord-campagne.md)).
 Chaque modèle renvoie vers sa page d'entraînement : remplace `https://ADRESSE-DU-SITE` par l'adresse du site.
+Les mêmes messages sont rangés dans `scenarios/*.json` (champ `message`). `outils/kit_campagne.py --adresse <site>` en tire des mails `.eml` prêts à envoyer, et vérifie que chaque lien mène à la bonne page.
 
 **Règles :**
 - Utilise toujours des **marques fictives** (Coliboréal, Drivéa Docs…), jamais une vraie entreprise ni une vraie administration.

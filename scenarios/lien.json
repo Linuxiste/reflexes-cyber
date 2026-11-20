@@ -7,5 +7,11 @@
   "Avant de cliquer, <strong>laisse la souris sur le lien</strong> sans cliquer : la vraie adresse s'affiche en bas de l'écran au bout d'une seconde environ.",
   "Un lien « Google » qui mène à <span class=\"adresse\">25fjus25g.fr/pageGOOGLE.html</span> n'est pas Google. Le vrai nom du site est juste avant le premier « / ».",
   "Sur téléphone : <strong>appui long</strong> sur le lien pour voir l'adresse avant de l'ouvrir."
- ]
+ ],
+ "message": {
+  "canal": "mail",
+  "expediteur": "Drivéa Docs <notification@drivea-docs.example>",
+  "objet": "Votre espace Drivéa Docs sera désactivé",
+  "corps": "Bonjour,\n\nVotre espace de partage Drivéa Docs arrive à expiration. Pour conserver vos documents, confirmez votre compte :\n\n[Accéder à mes documents]({{lien}})\n\nL'équipe Drivéa Docs"
+ }
 }

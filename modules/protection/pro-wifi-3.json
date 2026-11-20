@@ -1,0 +1,81 @@
+{
+ "id": "pro-wifi-3",
+ "rubrique": "Protection",
+ "theme": "Wi-Fi et déplacements",
+ "titre": "Quiz : en déplacement",
+ "reflexe": "Le partage de connexion de mon téléphone est plus sûr qu'un Wi-Fi public. Et un appareil perdu ou volé, je le signale tout de suite.",
+ "source": {
+  "nom": "ANSSI, recommandations sur le nomadisme numérique",
+  "url": "https://cyber.gouv.fr/publications/recommandations-sur-le-nomadisme-numerique"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Quiz ! Le réseau le plus sûr pour travailler en déplacement, c'est…",
+   "choix": [
+    {
+     "txt": "Le partage de connexion de mon téléphone",
+     "va": "q1oui"
+    },
+    {
+     "txt": "Le Wi-Fi de l'hôtel",
+     "va": "q1non"
+    }
+   ]
+  },
+  "q1oui": {
+   "msg": "Exact : c'est ton propre réseau.",
+   "va": "q2"
+  },
+  "q1non": {
+   "msg": "Le Wi-Fi de l'hôtel est partagé avec tous les clients. Ton propre partage de connexion est plus sûr.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : sur un Wi-Fi public, tu peux consulter…",
+   "choix": [
+    {
+     "txt": "Des infos et la météo",
+     "va": "q2oui"
+    },
+    {
+     "txt": "Mon compte bancaire",
+     "va": "q2non"
+    }
+   ]
+  },
+  "q2oui": {
+   "msg": "Oui, rien de sensible, aucun souci.",
+   "va": "q3"
+  },
+  "q2non": {
+   "msg": "Mieux vaut attendre d'être sur ton propre réseau pour la banque, ou passer par le réseau mobile.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Dernière : ton ordinateur de travail est volé dans ta voiture. Premier réflexe ?",
+   "choix": [
+    {
+     "txt": "Prévenir {{org.contact}} tout de suite",
+     "va": "fin"
+    },
+    {
+     "txt": "Attendre la plainte",
+     "va": "attendre"
+    }
+   ]
+  },
+  "attendre": {
+   "msg": "La plainte est importante, mais préviens d'abord {{org.contact}} : il faut fermer les accès avant qu'ils servent.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Bravo, tu as terminé la rubrique Protection ! 👋",
+   "fin": true
+  }
+ }
+}

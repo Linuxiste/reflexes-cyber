@@ -1,0 +1,66 @@
+{
+ "id": "pro-maj-1",
+ "rubrique": "Protection",
+ "theme": "Mises à jour",
+ "titre": "« Rappelez-moi plus tard »",
+ "reflexe": "Je fais les mises à jour dès qu'elles sont proposées, sur l'ordinateur comme sur le téléphone. Elles bouchent des trous déjà connus des pirates.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, les mises à jour",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/mises-a-jour"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "benevoles"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Salut, c'est {{perso}} ! Ton ordinateur affiche « Mises à jour disponibles ». Tu cliques sur quoi, d'habitude ?",
+   "choix": [
+    {
+     "txt": "« Rappelez-moi plus tard »",
+     "va": "plus_tard"
+    },
+    {
+     "txt": "« Installer maintenant »",
+     "va": "maintenant"
+    }
+   ]
+  },
+  "plus_tard": {
+   "msg": "Tu n'es pas le seul ! Ça tombe toujours au mauvais moment. Mais regarde ce qu'il y a dedans…",
+   "va": "trou"
+  },
+  "maintenant": {
+   "msg": "Bravo ! Tu sais ce qu'elles contiennent ?",
+   "choix": [
+    {
+     "txt": "Des nouveautés",
+     "va": "trou"
+    },
+    {
+     "txt": "Des corrections de sécurité",
+     "va": "trou"
+    }
+   ]
+  },
+  "trou": {
+   "msg": "Souvent, une mise à jour bouche une faille, un trou dans le logiciel. Et dès qu'elle est publiée, les pirates savent que le trou existe.",
+   "va": "course"
+  },
+  "course": {
+   "msg": "C'est une course : ils cherchent les ordinateurs qui n'ont pas encore fait la mise à jour. Chaque jour de retard laisse la porte ouverte.",
+   "va": "astuce"
+  },
+  "astuce": {
+   "msg": "L'astuce : lance les mises à jour avant de partir déjeuner ou le soir. Et active les mises à jour automatiques quand c'est possible.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Mise à jour proposée, mise à jour installée. Sur le téléphone aussi ! À demain ! 👋",
+   "fin": true
+  }
+ }
+}

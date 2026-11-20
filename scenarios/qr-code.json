@@ -7,5 +7,11 @@
   "Après le scan, <strong>je lis l'adresse</strong> que le téléphone affiche avant de l'ouvrir.",
   "Un autocollant collé par-dessus une affiche ou un horodateur ? <strong>Méfiance.</strong>",
   "Pour payer, je préfère l'appli officielle, installée moi-même."
- ]
+ ],
+ "message": {
+  "canal": "qr",
+  "expediteur": "",
+  "objet": "Wi-Fi invités : scannez pour vous connecter",
+  "corps": "Affiche à imprimer : « Wi-Fi invités : scannez pour vous connecter », avec le QR code vers {{lien}}"
+ }
 }

@@ -7,5 +7,11 @@
   "Une pièce jointe <strong>que je n'attendais pas</strong> ? Je demande à l'expéditeur, par un autre moyen, s'il me l'a bien envoyée.",
   "Méfiance avec les fichiers compressés (.zip), les documents qui demandent d'« activer les macros » et les extensions doubles (facture.pdf.exe).",
   "Si j'ai ouvert et que quelque chose me paraît bizarre, je préviens tout de suite {{org.contact}}."
- ]
+ ],
+ "message": {
+  "canal": "mail",
+  "expediteur": "Service facturation <factures@coliboreal.example>",
+  "objet": "Facture n° 2026-4471 en attente de règlement",
+  "corps": "Bonjour,\n\nVous trouverez ci-dessous votre facture en attente. Merci de la régler avant la fin de semaine.\n\n[Consulter la facture (PDF)]({{lien}})"
+ }
 }

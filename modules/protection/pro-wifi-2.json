@@ -1,0 +1,59 @@
+{
+ "id": "pro-wifi-2",
+ "rubrique": "Protection",
+ "theme": "Wi-Fi et déplacements",
+ "titre": "Mise en situation : le train et le voisin",
+ "reflexe": "En déplacement, je garde mon matériel avec moi, je protège mon écran des regards, et je ne parle pas de sujets confidentiels au téléphone en public.",
+ "source": {
+  "nom": "ANSSI, recommandations sur le nomadisme numérique",
+  "url": "https://cyber.gouv.fr/publications/recommandations-sur-le-nomadisme-numerique"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction",
+  "soin",
+  "rh"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Dans le train, tu ouvres un dossier sur une personne accompagnée. Ton voisin a une vue parfaite sur ton écran. Tu continues ?",
+   "choix": [
+    {
+     "txt": "Il ne regarde pas",
+     "va": "regarde_pas"
+    },
+    {
+     "txt": "Je change de place ou je ferme",
+     "va": "ferme"
+    }
+   ]
+  },
+  "regarde_pas": {
+   "msg": "Peut-être ! Mais un regard suffit pour lire un nom, et une photo de ton écran se prend discrètement.",
+   "va": "filtre"
+  },
+  "ferme": {
+   "msg": "Très bon réflexe ! Les informations sur les personnes méritent cette discrétion.",
+   "va": "filtre"
+  },
+  "filtre": {
+   "msg": "Un filtre de confidentialité sur l'écran aide beaucoup : vu de côté, l'écran paraît noir. Demande-le à {{org.contact}}.",
+   "va": "appel"
+  },
+  "appel": {
+   "msg": "Le téléphone aussi : un appel sur un dossier sensible, dans un wagon, tout le monde l'entend.",
+   "va": "pause"
+  },
+  "pause": {
+   "msg": "Et si tu vas au wagon-bar, ton ordinateur vient avec toi, ou reste verrouillé et rangé. Il ne garde pas ta place tout seul !",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "En déplacement : écran discret, conversations discrètes, matériel sous la main. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

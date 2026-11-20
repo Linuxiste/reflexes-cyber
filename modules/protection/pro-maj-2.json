@@ -1,0 +1,58 @@
+{
+ "id": "pro-maj-2",
+ "rubrique": "Protection",
+ "theme": "Mises à jour",
+ "titre": "Le vieil ordinateur du bureau",
+ "reflexe": "Un appareil qui ne reçoit plus de mises à jour de sécurité n'est plus protégé. Je le signale pour qu'il soit remplacé ou isolé.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, les mises à jour",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/mises-a-jour"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction",
+  "benevoles"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Dans un coin du bureau, un vieil ordinateur sert encore à imprimer. Il affiche « Windows 7 ». Ça te pose un souci ?",
+   "choix": [
+    {
+     "txt": "Non, il marche très bien",
+     "va": "marche"
+    },
+    {
+     "txt": "Oui, il est vieux",
+     "va": "vieux"
+    }
+   ]
+  },
+  "marche": {
+   "msg": "Il marche, oui ! Mais son système ne reçoit plus aucune mise à jour de sécurité depuis des années.",
+   "va": "fin_support"
+  },
+  "vieux": {
+   "msg": "Ce n'est pas son âge le souci, c'est autre chose…",
+   "va": "fin_support"
+  },
+  "fin_support": {
+   "msg": "Quand un éditeur arrête les mises à jour, chaque nouvelle faille découverte reste ouverte pour toujours. C'est pareil pour Windows 10 depuis octobre 2025.",
+   "va": "reseau"
+  },
+  "reseau": {
+   "msg": "Et cet ordinateur est branché sur le même réseau que les autres : il peut servir de porte d'entrée vers tout le bureau.",
+   "va": "geste"
+  },
+  "geste": {
+   "msg": "Pas de panique, et pas de reproche : signale-le à {{org.contact}}. On peut le remplacer, le débrancher du réseau, ou lui installer un système encore suivi.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Un appareil sans mises à jour, je le signale. Même s'il « marche très bien ». À demain ! 👋",
+   "fin": true
+  }
+ }
+}

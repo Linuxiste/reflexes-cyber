@@ -1,0 +1,68 @@
+{
+ "id": "pro-poste-1",
+ "rubrique": "Protection",
+ "theme": "Poste et appareils",
+ "titre": "Le café et l'écran ouvert",
+ "reflexe": "Quand je quitte mon poste, même deux minutes, je verrouille l'écran : touches Windows + L, ou Ctrl + Cmd + Q sur Mac.",
+ "source": {
+  "nom": "ANSSI, ReCyF en pratique : Durcissement et sécurité des équipements (v1.0, septembre 2026)",
+  "url": "https://messervices.cyber.gouv.fr/documents-guides/Fiche_Durcissement-securitee_VF.pdf"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "accueil",
+  "soin",
+  "educatif"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Tu pars chercher un café. Ton ordinateur reste allumé, ta messagerie ouverte. Ça ne craint rien, si ?",
+   "choix": [
+    {
+     "txt": "Non, c'est deux minutes",
+     "va": "deux"
+    },
+    {
+     "txt": "Je verrouille toujours",
+     "va": "verrouille"
+    }
+   ]
+  },
+  "deux": {
+   "msg": "Deux minutes, c'est assez pour lire un dossier, envoyer un mail en ton nom ou brancher une clé. Pas besoin d'être un pirate : un visiteur curieux suffit.",
+   "va": "public"
+  },
+  "verrouille": {
+   "msg": "Excellent réflexe ! Tu connais le raccourci le plus rapide ?",
+   "choix": [
+    {
+     "txt": "Oui",
+     "va": "raccourci"
+    },
+    {
+     "txt": "Pas vraiment",
+     "va": "raccourci"
+    }
+   ]
+  },
+  "public": {
+   "msg": "C'est encore plus vrai à l'accueil, ou quand des jeunes, des patients ou des visiteurs passent près de ton bureau.",
+   "va": "raccourci"
+  },
+  "raccourci": {
+   "msg": "Le raccourci magique : touche Windows + L. Sur Mac : Ctrl + Cmd + Q. Une seconde, et l'écran est verrouillé.",
+   "va": "auto"
+  },
+  "auto": {
+   "msg": "En plus, demande à {{org.contact}} que l'écran se verrouille tout seul après quelques minutes. C'est un filet de sécurité en cas d'oubli.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Je me lève, je verrouille. Windows + L devient un réflexe. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

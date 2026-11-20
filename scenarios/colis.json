@@ -7,5 +7,11 @@
   "Je ne suis <strong>jamais</strong> un lien reçu par SMS pour un colis, une amende ou un remboursement.",
   "J'attends un colis ? J'ouvre <strong>moi-même</strong> l'appli ou le site du transporteur, avec mon numéro de suivi.",
   "Je transfère le SMS frauduleux au <strong>33700</strong> (gratuit)."
- ]
+ ],
+ "message": {
+  "canal": "sms",
+  "expediteur": "Coliboréal",
+  "objet": "",
+  "corps": "Coliboréal : votre colis n'a pas pu être livré. Frais de réexpédition 1,99 € : {{lien}}"
+ }
 }

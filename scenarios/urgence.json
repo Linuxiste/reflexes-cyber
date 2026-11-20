@@ -7,5 +7,11 @@
   "<strong>Plus c'est urgent, plus je ralentis.</strong> Une vraie urgence supporte 2 minutes de vérification.",
   "Je vérifie <strong>par un autre chemin</strong> : l'appli officielle, le site que je tape moi-même, ou un appel à un numéro que je connais.",
   "En cas de doute au travail, je demande à {{org.contact}}."
- ]
+ ],
+ "message": {
+  "canal": "mail",
+  "expediteur": "Sécurité des comptes <alerte@verif-compte.example>",
+  "objet": "DERNIER RAPPEL : suspension de votre compte sous 24 h",
+  "corps": "Bonjour,\n\nSuite à une activité inhabituelle, votre compte sera suspendu dans 24 heures. Évitez la suspension en vérifiant votre identité maintenant :\n\n[Vérifier mon compte]({{lien}})"
+ }
 }

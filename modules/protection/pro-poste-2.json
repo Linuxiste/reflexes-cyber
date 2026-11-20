@@ -1,0 +1,66 @@
+{
+ "id": "pro-poste-2",
+ "rubrique": "Protection",
+ "theme": "Poste et appareils",
+ "titre": "La clé USB trouvée sur le parking",
+ "reflexe": "Je ne branche jamais une clé USB trouvée ou inconnue. Je la remets à {{org.contact}}, sans la tester « juste pour voir ».",
+ "source": {
+  "nom": "ANSSI, ReCyF en pratique : Durcissement et sécurité des équipements (v1.0, septembre 2026)",
+  "url": "https://messervices.cyber.gouv.fr/documents-guides/Fiche_Durcissement-securitee_VF.pdf"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "accueil"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Sur le parking, tu trouves une clé USB marquée « Salaires 2026 ». Tu fais quoi ?",
+   "choix": [
+    {
+     "txt": "Je la branche pour trouver le propriétaire",
+     "va": "branche"
+    },
+    {
+     "txt": "Je ne la branche pas",
+     "va": "branche_pas"
+    }
+   ]
+  },
+  "branche": {
+   "msg": "C'est gentil de vouloir la rendre ! Mais c'est exactement le piège : l'étiquette est faite pour te donner envie de la brancher.",
+   "va": "piege"
+  },
+  "branche_pas": {
+   "msg": "Parfait ! Et tu sais pourquoi c'est risqué ?",
+   "choix": [
+    {
+     "txt": "Elle peut contenir un virus",
+     "va": "piege"
+    },
+    {
+     "txt": "Pas vraiment",
+     "va": "piege"
+    }
+   ]
+  },
+  "piege": {
+   "msg": "Une clé piégée peut installer un logiciel malveillant dès qu'on la branche. Certaines se font même passer pour un clavier et tapent des commandes toutes seules.",
+   "va": "tous"
+  },
+  "tous": {
+   "msg": "C'est valable aussi pour une clé offerte dans un salon, ou un câble de recharge inconnu.",
+   "va": "geste"
+  },
+  "geste": {
+   "msg": "Le bon geste : la remettre à {{org.contact}}, sans la tester. Et pour échanger des fichiers, préfère un partage fourni par {{org.nom_court}}.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Clé inconnue, je ne branche pas. Même si l'étiquette donne très envie ! À demain ! 👋",
+   "fin": true
+  }
+ }
+}

@@ -1,0 +1,81 @@
+{
+ "id": "pro-maj-3",
+ "rubrique": "Protection",
+ "theme": "Mises à jour",
+ "titre": "Quiz : vraie ou fausse mise à jour ?",
+ "reflexe": "Les vraies mises à jour passent par les réglages de l'appareil ou par l'application elle-même, jamais par une fenêtre surgie d'un site web.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, les mises à jour",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/mises-a-jour"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Quiz ! Sur un site, une fenêtre surgit : « Votre lecteur vidéo est obsolète, mettez-le à jour ici ». Tu cliques ?",
+   "choix": [
+    {
+     "txt": "Oui, c'est une mise à jour",
+     "va": "q1non"
+    },
+    {
+     "txt": "Non, c'est louche",
+     "va": "q1oui"
+    }
+   ]
+  },
+  "q1non": {
+   "msg": "C'est un piège classique : une fausse mise à jour qui installe un logiciel malveillant.",
+   "va": "q2"
+  },
+  "q1oui": {
+   "msg": "Bien vu ! Une vraie mise à jour ne vient pas d'un site au hasard.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : où trouve-t-on les vraies mises à jour ?",
+   "choix": [
+    {
+     "txt": "Dans les réglages de l'appareil",
+     "va": "q2oui"
+    },
+    {
+     "txt": "Dans un mail qui me l'annonce",
+     "va": "q2non"
+    }
+   ]
+  },
+  "q2oui": {
+   "msg": "Exact : dans les réglages, ou dans le menu de l'application.",
+   "va": "q3"
+  },
+  "q2non": {
+   "msg": "Un mail avec un lien « mettez à jour ici » est souvent un piège. Les vraies passent par les réglages ou par l'application.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Dernière : les applications du téléphone aussi ont besoin de mises à jour ?",
+   "choix": [
+    {
+     "txt": "Oui",
+     "va": "fin"
+    },
+    {
+     "txt": "Non, seulement l'ordinateur",
+     "va": "tel"
+    }
+   ]
+  },
+  "tel": {
+   "msg": "Le téléphone aussi ! Il contient tes mails, tes codes et ta banque. Active les mises à jour automatiques dans le magasin d'applications.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Les vraies mises à jour passent par les réglages. Bravo ! 👋",
+   "fin": true
+  }
+ }
+}

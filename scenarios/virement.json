@@ -7,5 +7,11 @@
   "<strong>Urgent + secret = signal d'alarme.</strong> Le secret sert à t'empêcher de demander conseil.",
   "Je rappelle la personne <strong>sur le numéro que je connais déjà</strong>, jamais celui donné dans le message.",
   "Personne ne te reprochera d'avoir vérifié : un dirigeant préfère toujours un appel de 30 secondes à un virement perdu."
- ]
+ ],
+ "message": {
+  "canal": "mail",
+  "expediteur": "{{org.presidence}} <direction.urgent@messagerie.example>",
+  "objet": "Demande confidentielle",
+  "corps": "Bonjour,\n\nJe suis en réunion toute la journée. J'ai besoin que tu prépares un virement urgent pour un nouveau fournisseur. Merci de garder ça pour toi pour l'instant. Les coordonnées sont ici :\n\n[Coordonnées du fournisseur]({{lien}})"
+ }
 }

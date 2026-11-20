@@ -18,6 +18,25 @@ ORGANISATION=exemple docker compose up -d --build                # serveur sur l
 
 VM clé en main (Debian 12 ou 13) : `sh deploiement/installer_vm.sh <url-du-dépôt> <organisation>`.
 
+## Tester une campagne en local
+
+```sh
+python3 outils/construire.py --organisation exemple
+python3 -m http.server -d dist/exemple 8000          # terminal 1 : le site
+python3 outils/kit_campagne.py --organisation exemple --adresse http://localhost:8000   # terminal 2
+```
+
+`dist/kit-exemple/` contient alors (ce dossier n'est jamais publié sur le site) :
+- `apercu.html`, une boîte de réception de test avec les 6 faux messages et leurs liens ;
+- `*.eml`, de vrais mails à ouvrir dans Thunderbird ;
+- `sms-colis.txt`, le texte du faux SMS ;
+- `qr-qr-code.png`, le QR code, si `qrencode` est installé ;
+- `verification.txt`, qui indique pour chaque lien l'adresse visée et la réponse du serveur.
+
+L'outil échoue si un lien ne mène pas à une page « Tu t'es fait prendre ».
+
+**Depuis un téléphone** (SMS, QR code), `localhost` désigne le téléphone lui-même, pas ton PC. Utilise l'adresse de ton PC sur le réseau local, par exemple `--adresse http://192.168.20.15:8000`, avec `python3 -m http.server -d dist/exemple 8000 --bind 0.0.0.0`.
+
 ## Organisation du dépôt
 
 | Dossier | Contenu |

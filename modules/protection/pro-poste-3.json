@@ -1,0 +1,81 @@
+{
+ "id": "pro-poste-3",
+ "rubrique": "Protection",
+ "theme": "Poste et appareils",
+ "titre": "Quiz : mon poste, ma forteresse",
+ "reflexe": "Écran verrouillé quand je pars, aucune clé inconnue, et un appareil perdu ou volé signalé tout de suite.",
+ "source": {
+  "nom": "ANSSI, ReCyF en pratique : Durcissement et sécurité des équipements (v1.0, septembre 2026)",
+  "url": "https://messervices.cyber.gouv.fr/documents-guides/Fiche_Durcissement-securitee_VF.pdf"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Quiz ! Le raccourci pour verrouiller l'écran sous Windows, c'est…",
+   "choix": [
+    {
+     "txt": "Windows + L",
+     "va": "q1oui"
+    },
+    {
+     "txt": "Ctrl + Alt + C",
+     "va": "q1non"
+    }
+   ]
+  },
+  "q1oui": {
+   "msg": "Bravo ! L comme « Lock », verrouiller en anglais.",
+   "va": "q2"
+  },
+  "q1non": {
+   "msg": "C'est Windows + L. L comme « Lock », verrouiller en anglais.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : ton téléphone professionnel disparaît dans le train. Tu préviens quand ?",
+   "choix": [
+    {
+     "txt": "Tout de suite",
+     "va": "q2oui"
+    },
+    {
+     "txt": "Après l'avoir cherché une semaine",
+     "va": "q2non"
+    }
+   ]
+  },
+  "q2oui": {
+   "msg": "Oui : on peut alors le bloquer ou l'effacer à distance.",
+   "va": "q3"
+  },
+  "q2non": {
+   "msg": "Préviens tout de suite {{org.contact}} : on peut le bloquer ou l'effacer à distance avant que quelqu'un s'en serve.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Dernière : un collègue te prête une clé USB qu'il utilise chez lui. Tu la branches ?",
+   "choix": [
+    {
+     "txt": "Je préfère un partage de fichiers",
+     "va": "fin"
+    },
+    {
+     "txt": "Oui, c'est un collègue",
+     "va": "collegue"
+    }
+   ]
+  },
+  "collegue": {
+   "msg": "Il est de bonne foi, mais son ordinateur personnel peut être infecté sans qu'il le sache. Un partage de fichiers est plus sûr.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Écran verrouillé, clés inconnues écartées, perte signalée vite. Bravo ! 👋",
+   "fin": true
+  }
+ }
+}
