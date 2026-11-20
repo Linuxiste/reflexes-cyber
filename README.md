@@ -104,4 +104,4 @@ Elles sont contrôlées automatiquement par `construire.py` :
 - Textes, modules et images : **CC BY-SA 4.0** (https://creativecommons.org/licenses/by-sa/4.0/deed.fr).
 - Code : **MIT** (voir `LICENCE`).
 
-Tous les modules suivent les recommandations de l'ANSSI ([guides](https://messervices.cyber.gouv.fr/guides), [fiches pratiques ReCyF](https://messervices.cyber.gouv.fr/guides/fiches-pratiques-recyf)) et des services publics qui les relaient (Cybermalveillance.gouv.fr, CNIL, 17Cyber). La source exacte est toujours citée à la fin du module, et le site renvoie vers la documentation de l'ANSSI sur l'accueil, à la fin de chaque module et sur les pages d'entraînement.
+Tous les modules suivent les recommandations de l'ANSSI ([guides](https://messervices.cyber.gouv.fr/guides), [fiches pratiques ReCyF](https://messervices.cyber.gouv.fr/guides/fiches-pratiques-recyf)) et des services publics qui les relaient (Cybermalveillance.gouv.fr, CNIL, 17Cyber, 33700). La source exacte est toujours citée à la fin du module, et le site renvoie vers la documentation de l'ANSSI sur l'accueil, à la fin de chaque module et sur les pages d'entraînement.
