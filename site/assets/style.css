@@ -101,6 +101,8 @@ header.bandeau { display: flex; align-items: center; gap: 12px; padding: 12px 0;
 .conseils { background: var(--carte); border: 1px solid var(--bord); border-radius: 12px; padding: 4px 18px 14px; }
 .conseils li { margin: 8px 0; }
 .adresse { font-family: ui-monospace, monospace; background: var(--fond); padding: 1px 6px; border-radius: 6px; word-break: break-all; }
+.sources { border-top: 1px solid var(--doux); margin-top: 28px; padding-top: 8px; }
+.sources h2 { font-size: 1.05rem; }
 footer { color: var(--doux); font-size: .85rem; margin: 32px 0 16px; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .jour h2 { margin-top: 0; font-size: 1.05rem; }

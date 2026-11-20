@@ -149,6 +149,7 @@ GABARIT = """<!doctype html>
       <ul>
 {conseils}
       </ul>
+      <p class="source">Ces réflexes suivent les recommandations de l'ANSSI : <a href="https://messervices.cyber.gouv.fr/guides" rel="noopener" target="_blank">ses guides</a> et <a href="https://messervices.cyber.gouv.fr/guides/fiches-pratiques-recyf" rel="noopener" target="_blank">les fiches pratiques ReCyF</a>.</p>
     </section>
     <div class="actions">
       <a class="bouton plein" href="../../module.html?m={module}">Le module de 2 minutes sur ce piège</a>

@@ -82,6 +82,13 @@
     a.href = m.source.url; a.rel = "noopener"; a.target = "_blank";
     src.appendChild(a);
     fin.appendChild(src);
+    const anssi = el("p", "source");
+    anssi.append("Comme tous les modules, celui-ci suit les recommandations de l'ANSSI : ");
+    const g = el("a", "", "ses guides");
+    g.href = "https://messervices.cyber.gouv.fr/guides"; g.rel = "noopener"; g.target = "_blank";
+    anssi.appendChild(g);
+    anssi.append(".");
+    fin.appendChild(anssi);
     const act = el("div", "actions");
     const liste = catalogue.modules.map((x) => x.id);
     const suivant = liste[liste.indexOf(m.id) + 1];
