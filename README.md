@@ -7,35 +7,62 @@ Kit **libre et gratuit** de sensibilisation à la cybersécurité, pour les asso
 - **une personnalisation par structure** (contacts, réseaux Wi-Fi, métiers, modules propres) qui reste privée ;
 - **un site statique** dans un conteneur nginx : aucun compte, aucun cookie, aucune donnée collectée, et un journal sans adresse IP.
 
-## Démarrer
+## Voir le site sur ton PC (sans VM ni Docker)
+
+Il te faut seulement Python 3, déjà présent sur Debian. Rien n'est installé et rien ne tourne en arrière-plan.
 
 ```sh
-python3 outils/construire.py --organisation exemple --verifier   # contrôle des modules
-python3 outils/construire.py --organisation exemple              # → dist/exemple/ et dist/reflexes-exemple.sqlite
-python3 -m http.server -d dist/exemple 8000                      # aperçu sur http://localhost:8000/
-ORGANISATION=exemple docker compose up -d --build                # serveur sur le port 8080
+cd reflexes-cyber        # le dossier du dépôt
+./apercu.sh              # contrôle les modules, construit le site, puis lance le serveur
 ```
 
-VM clé en main (Debian 12 ou 13) : `sh deploiement/installer_vm.sh <url-du-dépôt> <organisation>`.
+Ouvre ensuite **http://localhost:8000/** dans ton navigateur. Pour arrêter, fais **Ctrl + C** dans le terminal.
 
-## Tester une campagne en local
+- Après une modification d'un module, arrête avec Ctrl + C et relance `./apercu.sh` : le site est reconstruit.
+- Un autre port : `./apercu.sh exemple 8080`.
+- Une autre structure : `./apercu.sh ma-structure`, avec son dossier `organisations/ma-structure/`.
+- Pour le voir depuis un téléphone du même réseau : `./apercu.sh exemple 8000 reseau`. Le script affiche l'adresse à taper sur le téléphone.
+
+Si un module ne respecte pas les règles, `./apercu.sh` s'arrête et indique lequel et pourquoi.
+
+## Tester une campagne de phishing en local
+
+Il faut **deux terminaux**, ouverts dans le dossier du dépôt.
+
+**Terminal 1 : le site**, qui reste ouvert pendant tout le test.
+```sh
+./apercu.sh
+```
+
+**Terminal 2 : les faux messages et la vérification des liens.**
+```sh
+python3 outils/kit_campagne.py --organisation exemple --adresse http://localhost:8000
+```
+
+Le terminal 2 affiche une ligne par faux message, avec OK ou ÉCHEC. Ouvre ensuite le dossier `dist/kit-exemple/` :
+
+| Fichier | À quoi il sert |
+|---|---|
+| `apercu.html` | Une boîte de réception de test. Ouvre-la dans le navigateur et clique sur chaque bouton : tu dois arriver sur « Tu t'es fait prendre… ». |
+| `*.eml` | Les 4 faux mails. Double-clique dessus : ils s'ouvrent dans Thunderbird comme de vrais mails. |
+| `sms-colis.txt` | Le texte du faux SMS. |
+| `qr-qr-code.png` | Le QR code. Il n'apparaît que si `qrencode` est installé (`sudo apt install qrencode`). |
+| `verification.txt` | Le résultat du contrôle : l'adresse visée par chaque lien et la réponse du serveur. |
+
+**Pour le SMS et le QR code**, teste depuis un téléphone. Sur le téléphone, `localhost` désigne le téléphone lui-même :
+```sh
+./apercu.sh exemple 8000 reseau                                                      # terminal 1
+python3 outils/kit_campagne.py --organisation exemple --adresse http://<IP-du-PC>:8000   # terminal 2
+```
+
+Le dossier `dist/kit-…` n'est jamais publié sur le site.
+
+## Installer pour de vrai (serveur ou VM)
 
 ```sh
-python3 outils/construire.py --organisation exemple
-python3 -m http.server -d dist/exemple 8000          # terminal 1 : le site
-python3 outils/kit_campagne.py --organisation exemple --adresse http://localhost:8000   # terminal 2
+ORGANISATION=exemple docker compose up -d --build     # serveur nginx durci, sur le port 8080
+sh deploiement/installer_vm.sh <url-du-dépôt> <organisation>   # VM Debian 12 ou 13 neuve, clé en main
 ```
-
-`dist/kit-exemple/` contient alors (ce dossier n'est jamais publié sur le site) :
-- `apercu.html`, une boîte de réception de test avec les 6 faux messages et leurs liens ;
-- `*.eml`, de vrais mails à ouvrir dans Thunderbird ;
-- `sms-colis.txt`, le texte du faux SMS ;
-- `qr-qr-code.png`, le QR code, si `qrencode` est installé ;
-- `verification.txt`, qui indique pour chaque lien l'adresse visée et la réponse du serveur.
-
-L'outil échoue si un lien ne mène pas à une page « Tu t'es fait prendre ».
-
-**Depuis un téléphone** (SMS, QR code), `localhost` désigne le téléphone lui-même, pas ton PC. Utilise l'adresse de ton PC sur le réseau local, par exemple `--adresse http://192.168.20.15:8000`, avec `python3 -m http.server -d dist/exemple 8000 --bind 0.0.0.0`.
 
 ## Organisation du dépôt
 
