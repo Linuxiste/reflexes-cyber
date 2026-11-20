@@ -1,0 +1,76 @@
+{
+ "id": "pro-mobile-1",
+ "rubrique": "Protection",
+ "theme": "Téléphone mobile",
+ "titre": "Un bureau dans ta poche",
+ "reflexe": "Je mets à jour mon téléphone et ses applications dès que possible, je le redémarre de temps en temps, je supprime les applications inutiles et je coupe Bluetooth, Wi-Fi et localisation quand je ne m'en sers pas.",
+ "source": {
+  "nom": "CERT-FR (ANSSI), 10 bonnes pratiques pour l'utilisation des téléphones mobiles (CERTFR-2025-DUR-001)",
+  "url": "https://cert.cyber.gouv.fr/dur/CERTFR-2025-DUR-001/"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction",
+  "accueil",
+  "benevoles"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Salut, c'est {{perso}} ! Ton téléphone contient tes mails, tes photos, tes codes… C'est un vrai bureau dans ta poche. Il est bien rangé ?",
+   "choix": [
+    {
+     "txt": "Je crois, oui",
+     "va": "oui"
+    },
+    {
+     "txt": "Euh… pas sûr",
+     "va": "pas-sur"
+    }
+   ]
+  },
+  "oui": {
+   "msg": "Parfait, on vérifie ensemble en trois points.",
+   "va": "maj"
+  },
+  "pas-sur": {
+   "msg": "Pas de souci, c'est le cas de presque tout le monde. Trois gestes suffisent.",
+   "va": "maj"
+  },
+  "maj": {
+   "msg": "1. Les mises à jour : installe-les dès qu'elles arrivent, système et applications. Elles bouchent des failles déjà connues des pirates.",
+   "va": "redemarrer"
+  },
+  "redemarrer": {
+   "msg": "Petit bonus de l'ANSSI : redémarre ton téléphone régulièrement. Certains logiciels espions ne survivent pas à un redémarrage.",
+   "va": "applis"
+  },
+  "applis": {
+   "msg": "2. Les applications : celles que tu n'utilises plus, supprime-les. Et pour les autres, une lampe de poche n'a pas besoin de tes contacts !",
+   "choix": [
+    {
+     "txt": "Je vais faire le tri",
+     "va": "sansfil"
+    },
+    {
+     "txt": "Comment je vérifie ?",
+     "va": "verifier"
+    }
+   ]
+  },
+  "verifier": {
+   "msg": "Dans les réglages, cherche « Autorisations » ou « Confidentialité » : tu vois quelle application accède à quoi, et tu peux retirer l'accès.",
+   "va": "sansfil"
+  },
+  "sansfil": {
+   "msg": "3. Bluetooth, Wi-Fi, NFC, localisation : quand tu ne t'en sers pas, coupe-les. Ce sont autant de portes ouvertes en moins.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "À jour, trié, portes fermées : ton bureau de poche est rangé. Demain, on parle chargeurs et réunions. 👋",
+   "fin": true
+  }
+ }
+}

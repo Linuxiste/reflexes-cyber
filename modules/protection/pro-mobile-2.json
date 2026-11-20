@@ -1,0 +1,76 @@
+{
+ "id": "pro-mobile-2",
+ "rubrique": "Protection",
+ "theme": "Téléphone mobile",
+ "titre": "Le chargeur trouvé sur la table",
+ "reflexe": "Je ne branche mon téléphone que sur mon chargeur ou une prise électrique, j'évite les Wi-Fi publics, je sépare le perso du pro, je l'éteins quand je le confie et je le laisse dehors pour les réunions sensibles.",
+ "source": {
+  "nom": "CERT-FR (ANSSI), 10 bonnes pratiques pour l'utilisation des téléphones mobiles (CERTFR-2025-DUR-001)",
+  "url": "https://cert.cyber.gouv.fr/dur/CERTFR-2025-DUR-001/"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction",
+  "finances",
+  "accueil"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Ta batterie est à 5 %. Sur la table de la salle d'attente, un câble USB est déjà branché. Tu fais quoi ?",
+   "choix": [
+    {
+     "txt": "Je branche, c'est pratique",
+     "va": "branche"
+    },
+    {
+     "txt": "J'hésite…",
+     "va": "hesite"
+    }
+   ]
+  },
+  "branche": {
+   "msg": "Tentant ! Mais un câble ou un port USB inconnu peut faire plus que charger : il peut aussi échanger des données avec ton téléphone.",
+   "va": "regle"
+  },
+  "hesite": {
+   "msg": "Bonne intuition : un câble ou un port USB inconnu peut faire plus que charger, il peut échanger des données.",
+   "va": "regle"
+  },
+  "regle": {
+   "msg": "La règle de l'ANSSI : ne jamais brancher ton téléphone sur un appareil inconnu (chargeur, clé, ordinateur), ni sur un Wi-Fi public. Ton propre chargeur sur une prise électrique, c'est parfait.",
+   "va": "separer"
+  },
+  "separer": {
+   "msg": "Autre bon réflexe : séparer le perso et le pro. Les jeux et applis perso d'un côté, les données de {{org.nom_court}} de l'autre.",
+   "va": "eteindre"
+  },
+  "eteindre": {
+   "msg": "Et quand tu dois te séparer de ton téléphone (contrôle, réparation, vestiaire), éteins-le complètement.",
+   "va": "reunion"
+  },
+  "reunion": {
+   "msg": "Dernier point, pour les réunions sensibles : laisse les téléphones dehors. Le mode avion n'empêche pas un logiciel espion d'écouter.",
+   "choix": [
+    {
+     "txt": "Même le mode avion ?",
+     "va": "avion"
+    },
+    {
+     "txt": "D'accord, c'est noté",
+     "va": "fin"
+    }
+   ]
+  },
+  "avion": {
+   "msg": "Oui : le mode avion coupe le réseau, pas le micro. Un espion peut enregistrer et tout envoyer plus tard.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Ton chargeur, ta prise, ta séparation perso/pro, et pas de téléphone en réunion sensible. Demain : les messages. 👋",
+   "fin": true
+  }
+ }
+}

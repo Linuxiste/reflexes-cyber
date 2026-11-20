@@ -1,0 +1,80 @@
+{
+ "id": "pro-mobile-3",
+ "rubrique": "Protection",
+ "theme": "Téléphone mobile",
+ "titre": "« Relie ton compte à ce nouvel appareil »",
+ "reflexe": "Les informations sensibles ne passent pas par SMS mais par une messagerie chiffrée de bout en bout. Je n'accepte jamais une demande de relier un nouvel appareil à mon compte sans l'avoir faite moi-même.",
+ "source": {
+  "nom": "CERT-FR (ANSSI), 10 bonnes pratiques pour l'utilisation des téléphones mobiles (CERTFR-2025-DUR-001)",
+  "url": "https://cert.cyber.gouv.fr/dur/CERTFR-2025-DUR-001/"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction",
+  "rh",
+  "soin"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Tu dois envoyer les coordonnées bancaires d'un bénévole à un collègue. Tu utilises quoi ?",
+   "choix": [
+    {
+     "txt": "Un SMS, c'est rapide",
+     "va": "sms"
+    },
+    {
+     "txt": "Une messagerie chiffrée",
+     "va": "chiffree"
+    }
+   ]
+  },
+  "sms": {
+   "msg": "Rapide, oui, mais un SMS n'est pas chiffré de bout en bout : il peut être lu en chemin.",
+   "va": "conseil"
+  },
+  "chiffree": {
+   "msg": "Bien vu ! Le chiffrement de bout en bout garantit que seul ton destinataire peut lire le message.",
+   "va": "conseil"
+  },
+  "conseil": {
+   "msg": "Pour tout ce qui est sensible, l'ANSSI recommande une messagerie chiffrée de bout en bout plutôt que le SMS. Demande à {{org.contact}} laquelle utiliser dans {{org.nom_court}}.",
+   "va": "piege"
+  },
+  "piege": {
+   "msg": "Maintenant, un piège répandu : tu reçois « Scanne ce QR code pour vérifier ton compte » ou « Donne-moi le code que tu viens de recevoir ».",
+   "choix": [
+    {
+     "txt": "Je le fais, ça a l'air officiel",
+     "va": "piege-oui"
+    },
+    {
+     "txt": "Je me méfie",
+     "va": "piege-non"
+    }
+   ]
+  },
+  "piege-oui": {
+   "msg": "Ce message est très bien imité ! Mais souvent, ce code ou ce QR code relie le téléphone de l'escroc à ton compte : il lit alors tous tes messages.",
+   "va": "verifier"
+  },
+  "piege-non": {
+   "msg": "Exactement : ce code ou ce QR code sert souvent à relier le téléphone de l'escroc à ton compte.",
+   "va": "verifier"
+  },
+  "verifier": {
+   "msg": "En cas de doute, vérifie l'origine par un autre moyen, et regarde dans les réglages la liste des « appareils connectés » à ton compte.",
+   "va": "alerte"
+  },
+  "alerte": {
+   "msg": "Et si Apple, Google ou ta messagerie t'alerte d'une attaque ciblée, préviens tout de suite {{org.contact}}. Pour les personnes très exposées, l'ANSSI conseille d'activer le mode de protection renforcée du téléphone.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Sensible = messagerie chiffrée, et jamais de code ou de QR code pour un appareil que tu n'as pas ajouté toi-même. 👋",
+   "fin": true
+  }
+ }
+}
