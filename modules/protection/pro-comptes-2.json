@@ -1,0 +1,68 @@
+{
+ "id": "pro-comptes-2",
+ "rubrique": "Protection",
+ "theme": "Comptes partagés et départs",
+ "titre": "Mise en situation : le départ de Sam",
+ "reflexe": "Quand quelqu'un part, ses comptes sont désactivés sans délai. Je préviens {{org.contact}} dès que je connais la date de départ.",
+ "source": {
+  "nom": "ANSSI, ReCyF en pratique : Gestion des identités (v1.0, septembre 2026)",
+  "url": "https://messervices.cyber.gouv.fr/documents-guides/Fiche_Gestion-des-identites_Protection_VF.pdf"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "rh",
+  "direction",
+  "benevoles"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Sam, qui gérait le planning, quitte l'équipe vendredi. Que faut-il prévoir côté informatique ?",
+   "choix": [
+    {
+     "txt": "Rien, il rendra son badge",
+     "va": "rien"
+    },
+    {
+     "txt": "Fermer ses accès",
+     "va": "fermer"
+    }
+   ]
+  },
+  "rien": {
+   "msg": "Le badge, oui ! Mais ses comptes informatiques continuent d'exister, eux. On les oublie facilement.",
+   "va": "risque"
+  },
+  "fermer": {
+   "msg": "Exactement. Tu penses à lesquels ?",
+   "choix": [
+    {
+     "txt": "Sa messagerie et ses logiciels",
+     "va": "risque"
+    },
+    {
+     "txt": "Je ne sais pas trop",
+     "va": "risque"
+    }
+   ]
+  },
+  "risque": {
+   "msg": "Messagerie, logiciels, partages de fichiers, groupes de discussion… Un compte oublié peut être utilisé des mois plus tard, par lui ou par quelqu'un d'autre.",
+   "va": "desactiver"
+  },
+  "desactiver": {
+   "msg": "La règle : désactiver ses comptes dès son départ. Désactiver plutôt que supprimer, pour garder ses documents et l'historique.",
+   "va": "qui"
+  },
+  "qui": {
+   "msg": "Le plus simple : prévenir {{org.contact}} dès que la date de départ est connue. Pareil pour une longue absence.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Un départ annoncé, des accès fermés. Sam partira l'esprit tranquille, et toi aussi. 👋",
+   "fin": true
+  }
+ }
+}

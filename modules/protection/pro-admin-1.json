@@ -1,0 +1,58 @@
+{
+ "id": "pro-admin-1",
+ "rubrique": "Protection",
+ "theme": "Droits d'administrateur",
+ "titre": "Les clés de tout le bâtiment",
+ "reflexe": "Au quotidien (mails, Internet, bureautique), j'utilise un compte simple. Le compte administrateur sert seulement à installer ou régler l'ordinateur.",
+ "source": {
+  "nom": "ANSSI, ReCyF en pratique : Administration (v1.0, septembre 2026)",
+  "url": "https://messervices.cyber.gouv.fr/documents-guides/Fiche_Administration_Protection_VF.pdf"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction",
+  "benevoles"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Petite image : tu préfères te promener avec la clé de ton bureau, ou avec le trousseau qui ouvre tout le bâtiment ?",
+   "choix": [
+    {
+     "txt": "La clé de mon bureau",
+     "va": "bureau"
+    },
+    {
+     "txt": "Le trousseau, c'est pratique",
+     "va": "trousseau"
+    }
+   ]
+  },
+  "bureau": {
+   "msg": "Sage ! Si tu la perds, seul ton bureau est exposé.",
+   "va": "admin"
+  },
+  "trousseau": {
+   "msg": "Pratique, oui… jusqu'au jour où tu le perds. Là, c'est tout le bâtiment qui est ouvert.",
+   "va": "admin"
+  },
+  "admin": {
+   "msg": "Sur un ordinateur, c'est pareil. Un compte administrateur peut tout installer, tout modifier, tout effacer : c'est le trousseau.",
+   "va": "piege"
+  },
+  "piege": {
+   "msg": "Si tu lis tes mails avec ce compte et que tu ouvres une pièce jointe piégée, le logiciel malveillant hérite de tout ce pouvoir.",
+   "va": "regle"
+  },
+  "regle": {
+   "msg": "La règle : un compte simple pour le quotidien (mails, Internet, documents), et le compte administrateur seulement pour installer ou régler la machine.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Le trousseau reste au coffre, je sors avec la clé de mon bureau. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

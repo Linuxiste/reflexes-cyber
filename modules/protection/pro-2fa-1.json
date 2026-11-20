@@ -1,0 +1,59 @@
+{
+ "id": "pro-2fa-1",
+ "rubrique": "Protection",
+ "theme": "Double authentification",
+ "titre": "La deuxième serrure",
+ "reflexe": "J'active la double authentification sur ma messagerie et mes comptes importants. Même si mon mot de passe est volé, le compte reste fermé.",
+ "source": {
+  "nom": "ANSSI, ReCyF en pratique : Gestion des identités (v1.0, septembre 2026)",
+  "url": "https://messervices.cyber.gouv.fr/documents-guides/Fiche_Gestion-des-identites_Protection_VF.pdf"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction",
+  "finances",
+  "accueil"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Imagine : un escroc a réussi à voler ton mot de passe de messagerie. Il peut entrer ?",
+   "choix": [
+    {
+     "txt": "Oui, forcément",
+     "va": "oui"
+    },
+    {
+     "txt": "Ça dépend",
+     "va": "depend"
+    }
+   ]
+  },
+  "oui": {
+   "msg": "Avec un mot de passe seul, oui. Sauf si ta porte a une deuxième serrure !",
+   "va": "deux"
+  },
+  "depend": {
+   "msg": "Exactement, ça dépend d'une chose : la deuxième serrure.",
+   "va": "deux"
+  },
+  "deux": {
+   "msg": "La double authentification, c'est demander deux preuves : ce que tu sais (ton mot de passe) et ce que tu possèdes (ton téléphone, par exemple).",
+   "va": "effet"
+  },
+  "effet": {
+   "msg": "L'escroc a ton mot de passe, mais pas ton téléphone dans sa poche. Résultat : la porte reste fermée.",
+   "va": "ou"
+  },
+  "ou": {
+   "msg": "C'est l'une des protections les plus efficaces contre le vol de mot de passe et l'hameçonnage. Commence par ta messagerie : elle donne accès à tout le reste.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Deux preuves valent mieux qu'une. Demain, je te montre comment ça se passe au quotidien. 👋",
+   "fin": true
+  }
+ }
+}

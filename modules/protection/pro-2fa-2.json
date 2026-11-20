@@ -1,0 +1,67 @@
+{
+ "id": "pro-2fa-2",
+ "rubrique": "Protection",
+ "theme": "Double authentification",
+ "titre": "La demande de validation surprise",
+ "reflexe": "Une demande de validation ou un code que je n'ai pas demandé ? Je refuse, je ne donne le code à personne, et je change mon mot de passe.",
+ "source": {
+  "nom": "ANSSI, ReCyF en pratique : Gestion des identités (v1.0, septembre 2026)",
+  "url": "https://messervices.cyber.gouv.fr/documents-guides/Fiche_Gestion-des-identites_Protection_VF.pdf"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction",
+  "finances"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Tu regardes la télé, et ton téléphone affiche : « Tentative de connexion à votre messagerie. Valider ? » Tu n'as rien demandé. Tu fais quoi ?",
+   "choix": [
+    {
+     "txt": "Je valide pour que ça s'arrête",
+     "va": "valide"
+    },
+    {
+     "txt": "Je refuse",
+     "va": "refuse"
+    }
+   ]
+  },
+  "valide": {
+   "msg": "C'est ce qu'espère l'escroc ! Il connaît déjà ton mot de passe, et il ne lui manque que ta validation.",
+   "va": "signe"
+  },
+  "refuse": {
+   "msg": "Parfait ! Et tu sais ce que ça veut dire ?",
+   "choix": [
+    {
+     "txt": "Quelqu'un a mon mot de passe",
+     "va": "signe"
+    },
+    {
+     "txt": "Un bug, sûrement",
+     "va": "signe"
+    }
+   ]
+  },
+  "signe": {
+   "msg": "Une demande que tu n'as pas faite signifie souvent que quelqu'un connaît ton mot de passe. Ta deuxième serrure vient de le bloquer.",
+   "va": "insiste"
+  },
+  "insiste": {
+   "msg": "Parfois, les demandes arrivent en rafale pour te fatiguer, ou quelqu'un t'appelle pour te réclamer le code. Ne cède jamais.",
+   "va": "geste"
+  },
+  "geste": {
+   "msg": "Le bon geste : refuser, changer ton mot de passe, et prévenir {{org.contact}} si c'est un compte de travail.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Je ne valide que ce que je viens de demander moi-même. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

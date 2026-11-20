@@ -1,0 +1,83 @@
+{
+ "id": "pro-comptes-3",
+ "rubrique": "Protection",
+ "theme": "Comptes partagés et départs",
+ "titre": "Quiz : qui a fait quoi ?",
+ "reflexe": "Chaque action doit pouvoir être rattachée à une personne : un compte par personne, des comptes fermés aux départs, et une revue régulière des comptes.",
+ "source": {
+  "nom": "ANSSI, ReCyF en pratique : Gestion des identités (v1.0, septembre 2026)",
+  "url": "https://messervices.cyber.gouv.fr/documents-guides/Fiche_Gestion-des-identites_Protection_VF.pdf"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "rh"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Quiz ! Un collègue absent pour 6 mois : que devient son compte ?",
+   "choix": [
+    {
+     "txt": "On le laisse ouvert",
+     "va": "q1non"
+    },
+    {
+     "txt": "On le désactive en attendant",
+     "va": "q1oui"
+    }
+   ]
+  },
+  "q1non": {
+   "msg": "Un compte inutilisé pendant des mois est une porte que personne ne surveille. On le désactive, et on le réactive à son retour.",
+   "va": "q2"
+  },
+  "q1oui": {
+   "msg": "Oui, et on le réactive à son retour.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : on trouve un compte au nom de quelqu'un qui est parti il y a un an. Normal ?",
+   "choix": [
+    {
+     "txt": "Non, il faut le fermer",
+     "va": "q2oui"
+    },
+    {
+     "txt": "Ce n'est pas grave",
+     "va": "q2non"
+    }
+   ]
+  },
+  "q2oui": {
+   "msg": "Bien vu ! C'est pour ça qu'on fait régulièrement le tour des comptes.",
+   "va": "q3"
+  },
+  "q2non": {
+   "msg": "C'est un oubli fréquent, mais risqué. D'où l'intérêt de faire régulièrement le tour des comptes.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Dernière : à quoi sert « un compte par personne » ?",
+   "choix": [
+    {
+     "txt": "À savoir qui a fait quoi",
+     "va": "fin"
+    },
+    {
+     "txt": "À surveiller les gens",
+     "va": "surveiller"
+    }
+   ]
+  },
+  "surveiller": {
+   "msg": "Non : ça sert surtout à protéger chacun. Si un problème arrive avec ton compte, on sait que ce n'est pas toi qui as utilisé celui d'un autre.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Un compte par personne, fermé au départ, et vérifié de temps en temps. Bravo ! 👋",
+   "fin": true
+  }
+ }
+}

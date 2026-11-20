@@ -1,0 +1,70 @@
+{
+ "id": "pro-mdp-2",
+ "rubrique": "Protection",
+ "theme": "Mots de passe",
+ "titre": "La phrase de passe et le coffre-fort",
+ "reflexe": "Une phrase de passe de plusieurs mots est longue, donc solide, et facile à retenir. Un gestionnaire de mots de passe retient tous les autres pour moi.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, 10 mesures essentielles",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/10-mesures-essentielles-assurer-securite-numerique"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "benevoles"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Lequel de ces deux mots de passe est le plus solide, selon toi ? « P@ssw0rd! » ou « parapente-cerise-lundi-violon » ?",
+   "choix": [
+    {
+     "txt": "P@ssw0rd!",
+     "va": "court"
+    },
+    {
+     "txt": "La phrase avec des mots",
+     "va": "long"
+    }
+   ]
+  },
+  "court": {
+   "msg": "Il a l'air compliqué, mais il est très connu des pirates et bien trop court. Leurs logiciels le trouvent en quelques secondes.",
+   "va": "longueur"
+  },
+  "long": {
+   "msg": "Exact ! Et en plus, il est bien plus facile à retenir.",
+   "va": "longueur"
+  },
+  "longueur": {
+   "msg": "Le secret, c'est la longueur. Quatre ou cinq mots choisis au hasard, sans lien entre eux, font une phrase de passe très solide.",
+   "va": "nombre"
+  },
+  "nombre": {
+   "msg": "« Mais je ne vais pas retenir 30 phrases ! » Bonne nouvelle : tu n'as pas à le faire.",
+   "choix": [
+    {
+     "txt": "Ah bon ?",
+     "va": "coffre"
+    },
+    {
+     "txt": "Je les note sur un carnet",
+     "va": "carnet"
+    }
+   ]
+  },
+  "carnet": {
+   "msg": "Un carnet rangé chez toi vaut mieux qu'un seul mot de passe partout. Mais au bureau, un post-it sur l'écran, non !",
+   "va": "coffre"
+  },
+  "coffre": {
+   "msg": "Un gestionnaire de mots de passe est un coffre-fort qui les retient tous. Toi, tu ne retiens qu'une seule phrase de passe : celle du coffre.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Une phrase de passe pour le coffre, et le coffre retient le reste. Demande à {{org.contact}} lequel utiliser. 👋",
+   "fin": true
+  }
+ }
+}

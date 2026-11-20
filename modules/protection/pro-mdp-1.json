@@ -1,0 +1,61 @@
+{
+ "id": "pro-mdp-1",
+ "rubrique": "Protection",
+ "theme": "Mots de passe",
+ "titre": "Le même mot de passe partout",
+ "reflexe": "Un mot de passe différent pour chaque compte important. Si un site se fait voler ses mots de passe, les autres comptes restent protégés.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, 10 mesures essentielles",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/10-mesures-essentielles-assurer-securite-numerique"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "benevoles"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Salut, c'est {{perso}} ! Question franche, entre nous : tu utilises le même mot de passe pour plusieurs comptes ?",
+   "choix": [
+    {
+     "txt": "Oui, c'est plus simple",
+     "va": "oui"
+    },
+    {
+     "txt": "Non, jamais",
+     "va": "non"
+    }
+   ]
+  },
+  "oui": {
+   "msg": "Merci pour ta franchise, tu es loin d'être le seul ! Voyons pourquoi c'est risqué.",
+   "va": "fuite"
+  },
+  "non": {
+   "msg": "Bravo ! Tu vas pouvoir expliquer pourquoi à tes collègues.",
+   "va": "fuite"
+  },
+  "fuite": {
+   "msg": "Chaque année, des sites se font voler leurs fichiers de mots de passe. Ce n'est pas ta faute : c'est le site qui est piraté.",
+   "va": "essai"
+  },
+  "essai": {
+   "msg": "Les escrocs essaient alors automatiquement ce mot de passe sur ta messagerie, ta banque, tes réseaux sociaux…",
+   "va": "domino"
+  },
+  "domino": {
+   "msg": "Avec un seul mot de passe partout, une fuite sur un petit site de jardinage peut ouvrir ta messagerie de travail. C'est l'effet domino.",
+   "va": "solution"
+  },
+  "solution": {
+   "msg": "La parade : un mot de passe différent pour chaque compte important. Demain, je te montre comment t'en souvenir sans effort.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Un compte, un mot de passe. Une fuite reste alors une petite fuite. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

@@ -1,0 +1,81 @@
+{
+ "id": "pro-2fa-3",
+ "rubrique": "Protection",
+ "theme": "Double authentification",
+ "titre": "Quiz : les deux preuves",
+ "reflexe": "Les deux preuves sont : ce que je sais (mot de passe), ce que je possède (téléphone, clé) ou ce que je suis (empreinte). Deux de familles différentes.",
+ "source": {
+  "nom": "ANSSI, ReCyF en pratique : Gestion des identités (v1.0, septembre 2026)",
+  "url": "https://messervices.cyber.gouv.fr/documents-guides/Fiche_Gestion-des-identites_Protection_VF.pdf"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Quiz ! Lequel de ces éléments est « quelque chose que tu possèdes » ?",
+   "choix": [
+    {
+     "txt": "Mon téléphone",
+     "va": "q1oui"
+    },
+    {
+     "txt": "Mon code PIN",
+     "va": "q1non"
+    }
+   ]
+  },
+  "q1oui": {
+   "msg": "Oui ! Le code PIN, lui, c'est quelque chose que tu sais.",
+   "va": "q2"
+  },
+  "q1non": {
+   "msg": "Le code PIN, c'est quelque chose que tu sais, comme un mot de passe. Ton téléphone, lui, tu le possèdes.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : deux mots de passe à la suite, c'est une double authentification ?",
+   "choix": [
+    {
+     "txt": "Oui",
+     "va": "q2non"
+    },
+    {
+     "txt": "Non",
+     "va": "q2oui"
+    }
+   ]
+  },
+  "q2oui": {
+   "msg": "Bien vu ! Deux choses que tu sais, ça reste une seule famille de preuve.",
+   "va": "q3"
+  },
+  "q2non": {
+   "msg": "Pas vraiment : ce sont deux choses que tu sais. Il faut deux familles différentes, comme un mot de passe et ton téléphone.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Dernière : par quel compte commencer pour activer la double authentification ?",
+   "choix": [
+    {
+     "txt": "Ma messagerie",
+     "va": "fin"
+    },
+    {
+     "txt": "Mon site de recettes",
+     "va": "recettes"
+    }
+   ]
+  },
+  "recettes": {
+   "msg": "Commence plutôt par ta messagerie : c'est elle qui sert à réinitialiser tous tes autres mots de passe.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Deux preuves de familles différentes, en commençant par la messagerie. Bravo ! 👋",
+   "fin": true
+  }
+ }
+}

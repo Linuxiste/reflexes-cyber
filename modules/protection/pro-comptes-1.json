@@ -1,0 +1,63 @@
+{
+ "id": "pro-comptes-1",
+ "rubrique": "Protection",
+ "theme": "Comptes partagés et départs",
+ "titre": "Le mot de passe de toute l'équipe",
+ "reflexe": "Un compte par personne. Quand un compte partagé est vraiment nécessaire, on note qui l'utilise et quand, et on change son mot de passe à chaque départ.",
+ "source": {
+  "nom": "ANSSI, ReCyF en pratique : Gestion des identités (v1.0, septembre 2026)",
+  "url": "https://messervices.cyber.gouv.fr/documents-guides/Fiche_Gestion-des-identites_Protection_VF.pdf"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "benevoles",
+  "educatif",
+  "accueil"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Dis-moi : chez {{org.nom_court}}, il y a une boîte mail ou un logiciel dont tout le monde connaît le même mot de passe ?",
+   "choix": [
+    {
+     "txt": "Oui, c'est pratique",
+     "va": "oui"
+    },
+    {
+     "txt": "Non, chacun a son compte",
+     "va": "non"
+    }
+   ]
+  },
+  "oui": {
+   "msg": "C'est très courant, et c'est souvent fait pour gagner du temps. Voyons ce que ça change.",
+   "va": "qui"
+  },
+  "non": {
+   "msg": "Super ! Voyons quand même pourquoi c'est important, pour pouvoir l'expliquer.",
+   "va": "qui"
+  },
+  "qui": {
+   "msg": "Avec un compte partagé, si un message bizarre part ou si un fichier disparaît, impossible de savoir qui l'a fait. Même pas pour se défendre.",
+   "va": "depart"
+  },
+  "depart": {
+   "msg": "Et quand quelqu'un quitte l'équipe, il garde le mot de passe en poche, souvent sans même y penser.",
+   "va": "regle"
+  },
+  "regle": {
+   "msg": "La règle de base : un compte par personne. Si un compte partagé est vraiment nécessaire, on note qui l'utilise et quand.",
+   "va": "changer"
+  },
+  "changer": {
+   "msg": "Et à chaque départ, on change son mot de passe. Ça prend deux minutes et ça ferme la porte.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Un compte par personne, ou un cahier pour le compte partagé. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

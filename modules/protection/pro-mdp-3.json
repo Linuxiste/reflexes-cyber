@@ -1,0 +1,81 @@
+{
+ "id": "pro-mdp-3",
+ "rubrique": "Protection",
+ "theme": "Mots de passe",
+ "titre": "Quiz éclair : les mots de passe",
+ "reflexe": "Un mot de passe se garde pour soi : on ne le donne ni par mail, ni par téléphone, ni à un collègue. Personne de sérieux ne le demande.",
+ "source": {
+  "nom": "Cybermalveillance.gouv.fr, 10 mesures essentielles",
+  "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/10-mesures-essentielles-assurer-securite-numerique"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Quiz éclair, 3 questions ! Ce qui rend un mot de passe solide avant tout, c'est…",
+   "choix": [
+    {
+     "txt": "Sa longueur",
+     "va": "q1oui"
+    },
+    {
+     "txt": "Les caractères spéciaux",
+     "va": "q1non"
+    }
+   ]
+  },
+  "q1oui": {
+   "msg": "Oui ! Plus c'est long, plus c'est solide.",
+   "va": "q2"
+  },
+  "q1non": {
+   "msg": "Ils aident un peu, mais c'est surtout la longueur qui compte. Une phrase de plusieurs mots bat un mot court plein de symboles.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : avant de partir en congé, un collègue te donne son mot de passe pour que tu le dépannes. Bonne idée ?",
+   "choix": [
+    {
+     "txt": "Oui, ça rend service",
+     "va": "q2non"
+    },
+    {
+     "txt": "Non, mieux vaut demander un accès",
+     "va": "q2oui"
+    }
+   ]
+  },
+  "q2non": {
+   "msg": "C'est gentil, mais ensuite, impossible de savoir qui a fait quoi sur son compte. On demande plutôt un accès à {{org.contact}}.",
+   "va": "q3"
+  },
+  "q2oui": {
+   "msg": "Bien vu ! Chacun son compte, chacun ses actions.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Dernière : un mail du « support » te demande ton mot de passe pour une maintenance. Tu le donnes ?",
+   "choix": [
+    {
+     "txt": "Jamais",
+     "va": "fin"
+    },
+    {
+     "txt": "Si c'est le support, oui",
+     "va": "jamais"
+    }
+   ]
+  },
+  "jamais": {
+   "msg": "Aucun support sérieux ne demande ton mot de passe. Jamais, même pour une maintenance.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Long, unique, et gardé pour soi : ton mot de passe est en de bonnes mains. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

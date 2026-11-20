@@ -1,0 +1,66 @@
+{
+ "id": "pro-admin-2",
+ "rubrique": "Protection",
+ "theme": "Droits d'administrateur",
+ "titre": "Mise en situation : « Il me faut les droits admin »",
+ "reflexe": "Besoin d'installer un logiciel ? Je demande à {{org.contact}} plutôt que de réclamer des droits administrateur permanents.",
+ "source": {
+  "nom": "ANSSI, ReCyF en pratique : Administration (v1.0, septembre 2026)",
+  "url": "https://messervices.cyber.gouv.fr/documents-guides/Fiche_Administration_Protection_VF.pdf"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [
+  "direction"
+ ],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Tu as besoin d'installer un petit logiciel pour ton travail, mais l'ordinateur refuse. Tu fais quoi ?",
+   "choix": [
+    {
+     "txt": "Je demande les droits admin pour toujours",
+     "va": "toujours"
+    },
+    {
+     "txt": "Je demande l'installation",
+     "va": "demande"
+    }
+   ]
+  },
+  "toujours": {
+   "msg": "C'est tentant pour ne plus être bloqué ! Mais ces droits resteraient ouverts tout le temps, y compris pour un logiciel malveillant.",
+   "va": "moindre"
+  },
+  "demande": {
+   "msg": "Bon réflexe ! Et tu sais pourquoi c'est mieux ainsi ?",
+   "choix": [
+    {
+     "txt": "Pour limiter les risques",
+     "va": "moindre"
+    },
+    {
+     "txt": "Pas vraiment",
+     "va": "moindre"
+    }
+   ]
+  },
+  "moindre": {
+   "msg": "C'est le principe du « moindre privilège » : chacun a juste les droits nécessaires à son travail, pas plus.",
+   "va": "pas"
+  },
+  "pas": {
+   "msg": "Ce n'est pas un manque de confiance en toi. C'est pour qu'une erreur ou un piège ait le moins de conséquences possible.",
+   "va": "geste"
+  },
+  "geste": {
+   "msg": "Le bon geste : demander l'installation à {{org.contact}}, qui vérifie aussi que le logiciel est sûr. Et c'est souvent rapide !",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Juste les droits nécessaires, et une demande quand il en faut plus. À demain ! 👋",
+   "fin": true
+  }
+ }
+}

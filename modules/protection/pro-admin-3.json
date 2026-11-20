@@ -1,0 +1,81 @@
+{
+ "id": "pro-admin-3",
+ "rubrique": "Protection",
+ "theme": "Droits d'administrateur",
+ "titre": "Quiz : le bon compte au bon moment",
+ "reflexe": "Compte simple pour les mails, Internet et les documents ; compte administrateur seulement pour administrer. Et jamais l'inverse.",
+ "source": {
+  "nom": "ANSSI, ReCyF en pratique : Administration (v1.0, septembre 2026)",
+  "url": "https://messervices.cyber.gouv.fr/documents-guides/Fiche_Administration_Protection_VF.pdf"
+ },
+ "metiers": [
+  "tous"
+ ],
+ "prioritaire_pour": [],
+ "statut": "brouillon",
+ "etapes": {
+  "debut": {
+   "msg": "Quiz ! Pour lire tes mails, tu utilises quel compte ?",
+   "choix": [
+    {
+     "txt": "Mon compte simple",
+     "va": "q1oui"
+    },
+    {
+     "txt": "Le compte administrateur",
+     "va": "q1non"
+    }
+   ]
+  },
+  "q1oui": {
+   "msg": "Parfait : c'est le compte du quotidien.",
+   "va": "q2"
+  },
+  "q1non": {
+   "msg": "Les mails sont la porte d'entrée n° 1 des pièges : on les lit avec un compte simple, aux droits limités.",
+   "va": "q2"
+  },
+  "q2": {
+   "msg": "Question 2 : pour installer une imprimante, tu as besoin de…",
+   "choix": [
+    {
+     "txt": "Droits administrateur",
+     "va": "q2oui"
+    },
+    {
+     "txt": "Rien de spécial",
+     "va": "q2non"
+    }
+   ]
+  },
+  "q2oui": {
+   "msg": "Oui, c'est le moment de l'utiliser, puis de revenir à ton compte simple.",
+   "va": "q3"
+  },
+  "q2non": {
+   "msg": "Installer un pilote modifie l'ordinateur : il faut des droits administrateur. On s'en sert, puis on revient au compte simple.",
+   "va": "q3"
+  },
+  "q3": {
+   "msg": "Dernière : sur ton ordinateur personnel, tu as souvent un seul compte, administrateur. Que faire ?",
+   "choix": [
+    {
+     "txt": "Créer un compte simple pour tous les jours",
+     "va": "fin"
+    },
+    {
+     "txt": "Rien, c'est chez moi",
+     "va": "maison"
+    }
+   ]
+  },
+  "maison": {
+   "msg": "Chez toi aussi, un compte simple pour tous les jours limite beaucoup les dégâts d'un piège. Ça se crée en deux minutes.",
+   "va": "fin"
+  },
+  "fin": {
+   "msg": "Le bon compte au bon moment : la série « identités et accès » est terminée. Bravo ! 👋",
+   "fin": true
+  }
+ }
+}
