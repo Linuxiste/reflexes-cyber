@@ -19,7 +19,7 @@
  "statut": "brouillon",
  "etapes": {
   "debut": {
-   "msg": "Dis-moi : chez {{org.nom_court}}, il y a une boîte mail ou un logiciel dont tout le monde connaît le même mot de passe ?",
+   "msg": "Dis-moi : dans {{org.nom_court}}, il y a une boîte mail ou un logiciel dont tout le monde connaît le même mot de passe ?",
    "choix": [
     {
      "txt": "Oui, c'est pratique",

@@ -119,7 +119,7 @@ M["pro-comptes-1"] = dict(theme="Comptes partagés et départs", titre="Le mot d
     source=GI, prio=["benevoles", "educatif", "accueil"],
     reflexe="Un compte par personne. Quand un compte partagé est vraiment nécessaire, on note qui l'utilise et quand, et on change son mot de passe à chaque départ.",
     etapes={
-    "debut": {"msg": "Dis-moi : chez {{org.nom_court}}, il y a une boîte mail ou un logiciel dont tout le monde connaît le même mot de passe ?",
+    "debut": {"msg": "Dis-moi : dans {{org.nom_court}}, il y a une boîte mail ou un logiciel dont tout le monde connaît le même mot de passe ?",
               "choix": ch(("Oui, c'est pratique", "oui"), ("Non, chacun a son compte", "non"))},
     "oui": {"msg": "C'est très courant, et c'est souvent fait pour gagner du temps. Voyons ce que ça change.", "va": "qui"},
     "non": {"msg": "Super ! Voyons quand même pourquoi c'est important, pour pouvoir l'expliquer.", "va": "qui"},

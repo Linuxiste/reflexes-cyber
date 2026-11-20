@@ -55,7 +55,7 @@
    "va": "fin"
   },
   "fin": {
-   "msg": "3 copies, 2 supports, 1 ailleurs, et un test de temps en temps. Demande à {{org.contact}} comment c'est fait chez {{org.nom_court}}. 👋",
+   "msg": "3 copies, 2 supports, 1 ailleurs, et un test de temps en temps. Demande à {{org.contact}} comment c'est fait dans {{org.nom_court}}. 👋",
    "fin": true
   }
  }

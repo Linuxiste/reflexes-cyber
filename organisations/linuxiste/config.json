@@ -1,0 +1,16 @@
+{
+ "_note": "Version publique sur https://linuxiste.fr/reflexes/ : textes génériques, valables pour toute structure.",
+ "nom_site": "Réflexes cyber",
+ "slogan": "2 minutes par jour pour tes réflexes cyber",
+ "personnage": {"nom": "Lou", "avatar": "🪂", "presentation": "monitrice de parapente : avant chaque vol, elle fait sa visite prévol. Ici, c'est la prévol de ta sécurité numérique."},
+ "rubriques": ["Défense", "Protection", "Résilience", "Gouvernance", "Obligations NIS 2"],
+ "pied": "Réflexes cyber, par Linuxiste · contenus libres CC BY-SA 4.0 · aucune donnée collectée · github.com/Linuxiste/reflexes-cyber",
+ "org": {
+  "nom": "Linuxiste",
+  "nom_court": "ta structure",
+  "contact": "la personne référente informatique",
+  "contact_detail": "par le moyen prévu dans ta structure",
+  "tresorier": "la personne qui gère les paiements",
+  "presidence": "la direction"
+ }
+}

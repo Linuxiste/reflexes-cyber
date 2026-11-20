@@ -46,11 +46,12 @@
       zone.setAttribute("role", "group");
       zone.setAttribute("aria-label", "Ta réponse");
       choix.forEach((c, i) => {
-        const b = el("button", "", c.txt);
+        const texte = c.txt.charAt(0).toUpperCase() + c.txt.slice(1);   // « la personne… » → « La personne… »
+        const b = el("button", "", texte);
         b.type = "button";
         b.addEventListener("click", () => {
           zone.remove();
-          fil.appendChild(el("div", "bulle moi", c.txt));
+          fil.appendChild(el("div", "bulle moi", texte));
           ok(c.va);
         });
         zone.appendChild(b);

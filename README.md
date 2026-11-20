@@ -64,6 +64,17 @@ ORGANISATION=exemple docker compose up -d --build     # serveur nginx durci, sur
 sh deploiement/installer_vm.sh <url-du-dépôt> <organisation>   # VM Debian 12 ou 13 neuve, clé en main
 ```
 
+## Version publique sur Linuxiste
+
+La version publique est sur **https://linuxiste.fr/reflexes/**, avec des textes génériques (`organisations/linuxiste/`).
+
+```sh
+sh deploiement/deployer_linuxiste.sh            # construit, envoie une nouvelle version et bascule dessus
+sh deploiement/deployer_linuxiste.sh --retour   # revient à la version précédente
+```
+
+Sur la VM, Apache sert `/var/www/reflexes-cyber/current` via `deploiement/apache-reflexes.conf`. Seule cette partie reçoit des en-têtes de sécurité stricts (CSP, nosniff, DENY). Le script garde les 5 dernières versions.
+
 ## Organisation du dépôt
 
 | Dossier | Contenu |

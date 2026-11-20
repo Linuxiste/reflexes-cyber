@@ -48,7 +48,7 @@
    "va": "outil"
   },
   "outil": {
-   "msg": "Et demande à {{org.contact}} quels outils d'IA sont autorisés chez {{org.nom_court}}.",
+   "msg": "Et demande à {{org.contact}} quels outils d'IA sont autorisés dans {{org.nom_court}}.",
    "va": "fin"
   },
   "fin": {

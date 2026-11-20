@@ -56,7 +56,7 @@ M["res-sauv-2"] = dict(rub="Résilience", theme="Sauvegardes", titre="La règle 
     "deux": {"msg": "2 supports différents : par exemple un disque externe et un service en ligne. Si l'un lâche, l'autre tient.", "va": "un"},
     "un": {"msg": "1 copie ailleurs : hors du bureau, ou hors ligne. En cas d'incendie, de vol ou de rançongiciel, elle reste intacte.", "va": "test"},
     "test": {"msg": "Et le secret que peu de gens connaissent : une sauvegarde qu'on n'a jamais essayé de restaurer n'est qu'un espoir. Teste de temps en temps.", "va": "fin"},
-    "fin": {"msg": "3 copies, 2 supports, 1 ailleurs, et un test de temps en temps. Demande à {{org.contact}} comment c'est fait chez {{org.nom_court}}. 👋", "fin": True}})
+    "fin": {"msg": "3 copies, 2 supports, 1 ailleurs, et un test de temps en temps. Demande à {{org.contact}} comment c'est fait dans {{org.nom_court}}. 👋", "fin": True}})
 
 M["res-sauv-3"] = dict(rub="Résilience", theme="Sauvegardes", titre="Quiz : sauvegarde ou pas ?", source=SAUV, prio=[],
     reflexe="Un document synchronisé n'est pas toujours sauvegardé : s'il est effacé ou chiffré, la synchronisation peut propager le problème. Une vraie sauvegarde garde l'historique.",
@@ -254,7 +254,7 @@ M["gou-ia-1"] = dict(rub="Gouvernance", theme="IA générative", titre="Ce que j
     "ou": {"msg": "Ce que tu écris dans une IA en ligne part sur les serveurs d'une entreprise. Il peut être conservé, relu, ou servir à entraîner l'outil.", "va": "sensible"},
     "sensible": {"msg": "Le nom d'une personne, sa santé, sa situation : ce sont des données personnelles, parfois sensibles. Elles n'ont rien à faire là.", "va": "comment"},
     "comment": {"msg": "Tu peux utiliser l'IA pour la forme : un modèle de compte rendu, une reformulation, sans aucun nom ni détail qui permette de reconnaître quelqu'un.", "va": "outil"},
-    "outil": {"msg": "Et demande à {{org.contact}} quels outils d'IA sont autorisés chez {{org.nom_court}}.", "va": "fin"},
+    "outil": {"msg": "Et demande à {{org.contact}} quels outils d'IA sont autorisés dans {{org.nom_court}}.", "va": "fin"},
     "fin": {"msg": "L'IA pour la forme, jamais pour les données des personnes. À demain ! 👋", "fin": True}})
 
 M["gou-ia-2"] = dict(rub="Gouvernance", theme="IA générative", titre="L'IA qui se trompe avec aplomb", source=IA, prio=["direction", "finances", "soin"],
