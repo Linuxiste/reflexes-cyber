@@ -6,7 +6,7 @@
 
 Sources :
 - modules/<rubrique>/*.json : modules communs (publics) ;
-- scenarios/*.json : pages d'entraînement au phishing (« Tu t'es fait prendre… ») ;
+- scenarios/*.json : pages d'entraînement au phishing (« Ce message était un exercice… ») ;
 - organisations/<nom>/config.json : personnalisation (nom, contacts, réseaux Wi-Fi…) ;
 - organisations/<nom>/modules/*.json : modules propres à la structure (PRIVÉS, jamais dans le dépôt public).
 
@@ -138,9 +138,9 @@ GABARIT = """<!doctype html>
 <body>
   <main class="page">
     <div class="panneau" role="alert">
-      <p class="gros">⚠️ Tu t'es fait prendre…</p>
-      <p><strong>Mais rien de grave :</strong> c'était un petit entraînement organisé par {org_nom}.
-      Aucune donnée n'a été enregistrée, et personne ne sait que c'est toi.</p>
+      <p class="gros">Ce message était un exercice — voici comment le repérer.</p>
+      <p>Rien de grave : c'était un entraînement organisé par {org_nom}. Ces messages sont faits pour tromper tout le monde.
+      Seules des statistiques anonymes sont conservées : personne n'est nommé.</p>
     </div>
     <h1>{titre}</h1>
     <p>{accroche}</p>

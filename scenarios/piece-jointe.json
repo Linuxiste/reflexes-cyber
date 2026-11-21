@@ -1,7 +1,7 @@
 {
  "slug": "piece-jointe",
  "titre": "La pièce jointe inattendue",
- "accroche": "Une facture ou un document que tu n'attendais pas : ouvrir une pièce jointe piégée peut installer un logiciel malveillant.",
+ "accroche": "Une facture ou un document que vous n'attendiez pas : ouvrir une pièce jointe piégée peut installer un logiciel malveillant.",
  "module": "def-phishing-3",
  "conseils": [
   "Une pièce jointe <strong>que je n'attendais pas</strong> ? Je demande à l'expéditeur, par un autre moyen, s'il me l'a bien envoyée.",

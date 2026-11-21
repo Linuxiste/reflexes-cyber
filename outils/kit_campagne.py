@@ -12,7 +12,7 @@ Produit dist/kit-<organisation>/ (jamais publié sur le site) :
 - verification.txt : pour chaque message, l'adresse du lien et la réponse du serveur.
 
 Le contrôle échoue (code 1) si un lien ne mène pas à une page d'entraînement qui répond 200,
-ou si la page reçue n'est pas une page « Tu t'es fait prendre ».
+ou si la page reçue n'est pas une page « Ce message était un exercice ».
 """
 from __future__ import annotations
 
@@ -56,7 +56,7 @@ def verifier(url: str) -> tuple[int | str, bool]:
     try:
         with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "kit-campagne"}), timeout=10) as r:
             page = r.read().decode("utf-8", "replace")
-            return r.status, "Tu t'es fait prendre" in page
+            return r.status, "Ce message était un exercice" in page
     except Exception as e:  # serveur arrêté, mauvaise adresse…
         return f"erreur ({e.__class__.__name__})", False
 
@@ -88,7 +88,7 @@ def main() -> int:
             e = EmailMessage()
             e["From"], e["To"], e["Subject"] = exp, "Boîte de test <test@exemple.invalid>", objet
             e["Date"], e["Message-ID"] = formatdate(localtime=True), make_msgid("entrainement", domain="reflexes-cyber.invalid")
-            e["X-Entrainement"] = "Faux message d'entraînement (Réflexes cyber), aucune donnée collectée"
+            e["X-Entrainement"] = "Faux message d'entraînement (Réflexes cyber), statistiques anonymes uniquement"
             e.set_content(corps_texte(corps))
             e.add_alternative(f"<html><body style=\"font-family:sans-serif\">{corps_html(corps)}</body></html>", subtype="html")
             (sortie / f"{s['slug']}.eml").write_bytes(bytes(e))
@@ -116,7 +116,7 @@ def main() -> int:
 <meta name="viewport" content="width=device-width, initial-scale=1"><title>Boîte de test · campagne d'entraînement</title>
 <body style="font-family:system-ui,sans-serif;background:#eef1f4;color:#1d2733;max-width:720px;margin:0 auto;padding:16px">
 <h1 style="font-size:1.3em">Boîte de test : les faux messages de la campagne</h1>
-<p>Site testé : <code>{html.escape(base)}</code>. Clique sur chaque lien : tu dois arriver sur la page « Tu t'es fait prendre… ».</p>
+<p>Site testé : <code>{html.escape(base)}</code>. Clique sur chaque lien : tu dois arriver sur la page « Ce message était un exercice… ».</p>
 {''.join(cartes)}</body></html>
 """, encoding="utf-8")
     print("\n".join(lignes))

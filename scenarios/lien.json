@@ -4,9 +4,9 @@
  "accroche": "Le mail avait l'air sérieux, mais le lien menait vers un autre site que celui annoncé.",
  "module": "def-phishing-1",
  "conseils": [
-  "Avant de cliquer, <strong>laisse la souris sur le lien</strong> sans cliquer : la vraie adresse s'affiche en bas de l'écran au bout d'une seconde environ.",
+  "Avant de cliquer, <strong>je laisse la souris sur le lien</strong>, sans cliquer : la vraie adresse s'affiche en bas de l'écran au bout d'une seconde environ.",
   "Un lien « Google » qui mène à <span class=\"adresse\">25fjus25g.fr/pageGOOGLE.html</span> n'est pas Google. Le vrai nom du site est juste avant le premier « / ».",
-  "Sur téléphone : <strong>appui long</strong> sur le lien pour voir l'adresse avant de l'ouvrir."
+  "Sur téléphone, je fais un <strong>appui long</strong> sur le lien pour voir l'adresse avant de l'ouvrir."
  ],
  "message": {
   "canal": "mail",

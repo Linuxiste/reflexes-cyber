@@ -4,9 +4,9 @@
  "accroche": "Un message de la direction demandait un virement urgent et confidentiel. C'est la fraude au président.",
  "module": "def-president-1",
  "conseils": [
-  "<strong>Urgent + secret = signal d'alarme.</strong> Le secret sert à t'empêcher de demander conseil.",
+  "<strong>Urgent + secret = signal d'alarme.</strong> Le secret sert à vous empêcher de demander conseil.",
   "Je rappelle la personne <strong>sur le numéro que je connais déjà</strong>, jamais celui donné dans le message.",
-  "Personne ne te reprochera d'avoir vérifié : un dirigeant préfère toujours un appel de 30 secondes à un virement perdu."
+  "Personne ne vous reprochera d'avoir vérifié : un dirigeant préfère toujours un appel de 30 secondes à un virement perdu."
  ],
  "message": {
   "canal": "mail",

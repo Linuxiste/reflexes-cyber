@@ -6,10 +6,11 @@ Les mêmes messages sont rangés dans `scenarios/*.json` (champ `message`). `out
 
 **Règles :**
 - Utilise toujours des **marques fictives** (Coliboréal, Drivéa Docs…), jamais une vraie entreprise ni une vraie administration.
-- Ne demande **jamais** de mot de passe ni de données : le lien mène directement à la page « Tu t'es fait prendre… ».
+- Ne demande **jamais** de mot de passe ni de données : le lien mène directement à la page « Ce message était un exercice… ».
 - N'usurpe le nom d'une personne de la structure (scénario « virement ») qu'**avec son accord**.
 - Envoie depuis une adresse créée pour l'exercice, pas depuis la boîte d'un collègue.
 - Annonce à l'avance qu'il y aura des exercices ce trimestre, sans en donner les dates.
+- Informe au préalable les représentants du personnel (CSE), s'il y en a.
 
 ---
 

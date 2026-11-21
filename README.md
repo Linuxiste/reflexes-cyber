@@ -3,9 +3,9 @@
 Kit **libre et gratuit** de sensibilisation à la cybersécurité, pour les associations et les petites structures :
 
 - **des modules de 2 minutes** en forme de conversation : un personnage, Lou, dialogue avec l'utilisateur, et la suite change selon ses réponses. Chaque module compte 6 à 10 messages et fait passer un seul réflexe ;
-- **des pages d'entraînement au phishing** (« ⚠️ Tu t'es fait prendre… mais rien de grave »), pour des campagnes internes bienveillantes ;
+- **des pages d'entraînement au phishing** (« Ce message était un exercice — voici comment le repérer »), pour des campagnes internes bienveillantes ;
 - **une personnalisation par structure** (contacts, réseaux Wi-Fi, métiers, modules propres) qui reste privée ;
-- **un site statique** dans un conteneur nginx : aucun compte, aucun cookie, aucune donnée collectée, et un journal sans adresse IP.
+- **un site statique** dans un conteneur nginx : aucun compte, aucun cookie, aucune donnée personnelle collectée, et un journal sans adresse IP (statistiques anonymes uniquement).
 
 ## Voir le site sur ton PC (sans VM ni Docker)
 
@@ -43,7 +43,7 @@ Le terminal 2 affiche une ligne par faux message, avec OK ou ÉCHEC. Ouvre ensui
 
 | Fichier | À quoi il sert |
 |---|---|
-| `apercu.html` | Une boîte de réception de test. Ouvre-la dans le navigateur et clique sur chaque bouton : tu dois arriver sur « Tu t'es fait prendre… ». |
+| `apercu.html` | Une boîte de réception de test. Ouvre-la dans le navigateur et clique sur chaque bouton : tu dois arriver sur « Ce message était un exercice… ». |
 | `*.eml` | Les 4 faux mails. Double-clique dessus : ils s'ouvrent dans Thunderbird comme de vrais mails. |
 | `sms-colis.txt` | Le texte du faux SMS. |
 | `qr-qr-code.png` | Le QR code. Il n'apparaît que si `qrencode` est installé (`sudo apt install qrencode`). |
